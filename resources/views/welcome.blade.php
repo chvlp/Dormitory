@@ -80,7 +80,7 @@
             @endif
             <div class="content">
                 <div class="title m-b-md">
-                    {{('ຍິນດີຕອນຮັບ admin')}}
+                    {{('ຍິນດີຕອນຮັບ')}}
                 </div>
 
             </div>
