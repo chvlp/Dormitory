@@ -42,7 +42,7 @@
         <div class="card-deck">
             <div class="row">
                 @foreach ($dormitorys as $key => $item)
-                    @if($item->school_id==1)
+                    @if($item->school_id==3)
                         <div class="col-md-4">
                             <div style="border: 1px solid  #5499C7 ;" class="card mb-4 box-shadow">
                                 <a href="{{route('soutsaka.show',$item->id)}}"> <img class="card-img-top" src="{{URL::to($item->image)}}" height="300" width="10000" alt="Card image cap"></a>
