@@ -31,11 +31,12 @@ class CommentController extends Controller
         }
             else{
                 $registors = registor::all();
+                $registUsers = RegistorUser::all();
                 $comments = Comment::where('body','like','%'.$request->search.'%')
                 ->orWhere('dormitory_id','like','%'.$request->search.'%')
                 ->orWhere('user_id','like','%'.$request->search.'%')
                 ->paginate(5);
-                return view('admin.comment.index',compact('comments','registors'));
+                return view('admin.comment.index',compact('comments','registors','registUsers'));
             }
     }
 

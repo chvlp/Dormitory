@@ -23,12 +23,6 @@
         @csrf
         <div style="width: 70%;margin:auto;" class="col">
         <div class="row">
-            <div class="col-xs-6  ">
-                <div class="form-group">
-                    <strong>ຈຳນວນ</strong>
-                    <input type="number" name="qty" class="form-control" placeholder=" ຈຳນວນຫ້ອງເເຖວທີ່ຕ້ອງການໂຄສະນາ">
-                </div>
-            </div>
 
             <div class="col-xs-6  ">
                 <div class="form-group">

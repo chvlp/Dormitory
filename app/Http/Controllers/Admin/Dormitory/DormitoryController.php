@@ -31,6 +31,7 @@ class DormitoryController extends Controller
         }
             else{
                 $registors = registor::all();
+                $registUsers = RegistorUser::all();
                 $dormitorys= Dormitory::where('name','like','%'.$request->search.'%')
                 ->orWhere('village','like','%'.$request->search.'%')
                 ->orWhere('distric','like','%'.$request->search.'%')
@@ -40,7 +41,7 @@ class DormitoryController extends Controller
                 ->orWhere('phase','like','%'.$request->search.'%')
                 ->orWhere('price','like','%'.$request->search.'%')
                 ->paginate(5);
-            return view('admin.dormitory.index',compact('dormitorys','registors'));
+            return view('admin.dormitory.index',compact('dormitorys','registors','registUsers'));
 
             }
     }

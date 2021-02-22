@@ -29,7 +29,6 @@ class RegistController extends Controller
         // return $dormitory->id;
         RegistorUser::create([
             'user_id' =>auth()->user()->id,
-            'qty' =>request('qty'),
             'village' =>request('village'),
             'distric' =>request('distric'),
             'province' =>request('province'),

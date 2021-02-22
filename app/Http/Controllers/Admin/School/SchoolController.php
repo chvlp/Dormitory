@@ -25,12 +25,13 @@ class SchoolController extends Controller
         }
             else{
                 $registors = registor::all();
+                $registUsers = RegistorUser::all();
                 $schools= School::where('name','like','%'.$request->search.'%')
                 ->orWhere('village','like','%'.$request->search.'%')
                 ->orWhere('distric','like','%'.$request->search.'%')
                 ->orWhere('province','like','%'.$request->search.'%')
                 ->paginate(5);
-                return view('admin.school.index',compact('schools','registors'));
+                return view('admin.school.index',compact('schools','registors','registUsers'));
             }
 
 

@@ -78,12 +78,11 @@
                                                 <div style="font-size: 13px"  class="card-body">
                                                     <p class="card-text">ຊື່: {{$item->user->name}}</p>
                                                     <p class="card-text">ເບິໂທ: {{$item->user->phone}}</p>
-                                                    <p class="card-text">ຈຳນວນຫ້ອງເເຖວ: <i style="font-style: normal;color:red;font-size:15px;"> {{$item->qty}}  </i> </p>
                                                     <p class="card-text">ບ້ານ: {{$item->village}}</p>
                                                     <p class="card-text">ເມືອງ: {{$item->distric}}</p>
                                                     <p class="card-text">ເເຂວງ: {{$item->province}}</p>
                                                     <p class="card-text">ລາຍລະອຽດ: {{$item->details}} </p>
-                                                    <a href="{{URL::to('admin/delete/registor/'.$item->id)}}"><p class="card-text"><i class="fas fa-trash-alt"></i></p></a>
+                                                    <a href="{{URL::to('admin/delete/registor/user/'.$item->id)}}"><p class="card-text"><i class="fas fa-trash-alt"></i></p></a>
                                                 </div>
                                         </div>
                                     </div>

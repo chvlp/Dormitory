@@ -36,11 +36,12 @@ class UserController extends Controller
         }
             else{
                 $registors = registor::all();
+                $registUsers = RegistorUser::all();
                 $users = User::where('name','like','%'.$request->search.'%')
                 ->orWhere('phone','like','%'.$request->search.'%')
                 ->orWhere('email','like','%'.$request->search.'%')
                 ->paginate(5);
-                return view('admin.user.index',compact('users','registors'));
+                return view('admin.user.index',compact('users','registors','registUsers'));
             }
     }
 

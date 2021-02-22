@@ -26,6 +26,6 @@ class RegistController extends Controller
             $registors = registor::find($id)->where('id',$id)->first();
             $registors = registor::find($id)->where('id',$id)->delete();
             return redirect()->route('admin.regist.index')
-                                ->with('succes','ລົບຂໍ້ມູນການຮອງຂໍສຳເລັດ');
+                                ->with('succes','ລົບຂໍ້ມູນການຮອງຂໍເພິມຈຳນວນຫ້ອງເເຖວສຳເລັດ');
     }
 }

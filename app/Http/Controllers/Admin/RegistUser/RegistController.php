@@ -29,7 +29,7 @@ class RegistController extends Controller
 
             $registUsers = RegistorUser::find($id)->where('id',$id)->first();
             $registUsers = RegistorUser::find($id)->where('id',$id)->delete();
-            return redirect()->RegistorUser('admin.regist.index')
+            return redirect()->route('admin.registUser.index')
                                 ->with('succes','ລົບຂໍ້ມູນການຮອງຂໍເປັນເຈົາຂອງຫ້ອງເເຖວສຳເລັດ');
     }
 }

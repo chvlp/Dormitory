@@ -26,9 +26,10 @@ class ImagesConroller extends Controller
         }
             else{
                 $registors = registor::all();
+                $registUsers = RegistorUser::all();
                 $images= Image::where('dormitory_id','like','%'.$request->search.'%')
                 ->paginate(5);
-                return view('admin.image.index',compact('images','registors'));
+                return view('admin.image.index',compact('images','registors','registUsers'));
 
             }
 
