@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\registor;
+use App\RegistorUser;
 use Illuminate\Http\Request;
 
 class IndexController extends Controller
@@ -18,7 +20,9 @@ class IndexController extends Controller
      */
     public function index()
     {
-        return view('admin.index');
+        $registors = registor::all();
+        $registUsers = RegistorUser::all();
+        return view('admin.index',compact('registors','registUsers'));
     }
 
     /**

@@ -1,0 +1,35 @@
+<?php
+
+namespace App\Http\Controllers\Admin\RegistUser;
+
+use App\Http\Controllers\Controller;
+use App\registor;
+use App\RegistorUser;
+use App\User;
+use Illuminate\Http\Request;
+
+class RegistController extends Controller
+{
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
+        $registors = registor::all();
+        $users = User::all();
+        $registUsers = RegistorUser::all();
+        return view('admin.registUser.index',compact('registors','users','registUsers'));
+
+    }
+
+    public function Delete($id)
+    {
+
+            $registUsers = RegistorUser::find($id)->where('id',$id)->first();
+            $registUsers = RegistorUser::find($id)->where('id',$id)->delete();
+            return redirect()->RegistorUser('admin.regist.index')
+                                ->with('succes','ລົບຂໍ້ມູນການຮອງຂໍເປັນເຈົາຂອງຫ້ອງເເຖວສຳເລັດ');
+    }
+}

@@ -6,7 +6,7 @@
     <br><br><br>
 
     <section class="content-header">
-        <center><h1> ສະໝັກເປັນເຈົ້າຂອງຫ້ອງເເຖວ</h1></center>
+        <center><h1> ສະໝັກຈຳນວນຫ້ອງເເຖວເພິມ</h1></center>
     </section>
 
 
@@ -25,22 +25,15 @@
         <div class="row">
             <div class="col-xs-13  ">
                 <div class="form-group">
-                    <strong>ເບີໂທ</strong>
-                    <input type="text" name="phone" class="form-control" placeholder="ເບິໂທຕິດຕໍ່">
-                </div>
-            </div>
-
-            <div class="col-xs-13  ">
-                <div class="form-group">
                     <strong>ຈຳນວນ</strong>
-                    <input type="text" name="qty" class="form-control" placeholder=" ຈຳນວນຫ້ອງເເຖວທີ່ຕ້ອງການໂຄສະນາ">
+                    <input type="number" name="qty" class="form-control" placeholder=" ຈຳນວນຫ້ອງເເຖວທີ່ຕ້ອງການໂຄສະນາ">
                 </div>
             </div>
 
             <div class="col-xs-13 ">
                 <div class="form-group">
                     <strong>ລາຍລະອຽດ</strong>
-                    <input type="text" name="details" class="form-control" placeholder=" ລາຍລະອຽດຕ່າງທີ່ຕ້ອງການບອກກັບເຈົ້າຂອງລະບົບ">
+                    <textarea type="text" name="details" class="form-control" placeholder=" ລາຍລະອຽດຕ່າງທີ່ຕ້ອງການບອກກັບເຈົ້າຂອງລະບົບ"></textarea>
                 </div>
             </div><br>
             <div class="col-xs-6 col-sm-12 col-md-12">

@@ -16,7 +16,6 @@ class CreateRegistorsTable extends Migration
         Schema::create('registors', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('user_id')->unsigned();
-            $table->string('phone');
             $table->integer('qty');
             $table->string('details');
             $table->timestamps();

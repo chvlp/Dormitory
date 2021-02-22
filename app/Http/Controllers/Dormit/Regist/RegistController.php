@@ -27,13 +27,12 @@ class RegistController extends Controller
         // return $dormitory->id;
         registor::create([
            'user_id' =>auth()->user()->id,
-           'phone' =>request('phone'),
            'qty' =>request('qty'),
            'details' =>request('details')
         ]);
         // $request->save();
         // return back();
         return redirect()->route('Dormit.regist.index')
-        ->with('succes', 'ການສະໝັກສະມາຊິກເປັນເຈົ້າຂອງຫ້ອງເເຖວສຳເລັດກະລຸນາລໍຖ້າການຕິດຕໍ່ກັບ ຂໍຂອບໃຈ');
+        ->with('succes', 'ການສະໝັກເພິມຈຳນວນຫ້ອງເເຖວສຳເລັດ ກະລະນາລໍຖ້າການຕິດຕໍ່ກັບ ຂໍຂອບໃຈ');
     }
 }

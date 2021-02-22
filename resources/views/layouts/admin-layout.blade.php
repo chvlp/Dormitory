@@ -67,9 +67,15 @@
                 <li class="dropdown user user-menu">
                   <!-- Menu Toggle Button -->
                   <li class="nav-item">
-                  <li><a class="nav-link active" aria-current="page" href="{{route('admin.regist.index')}}"><i class="far fa-comment-dots"></i> ຂໍ້ມູນການຮອງຂໍ້ຈາກຜູ້ໃຊ້</a>
+                  <li><a class="nav-link active" aria-current="page" href="{{route('admin.registUser.index')}}"> <i style="color:red;font-style: normal;"> {{ $registUsers->count() }} </i> <i class="far fa-comment-dots"></i> ຂໍ້ມູນຮອງຂໍເປັນເຈົ້າຂອງຫ້ອງເເຖວຈາກຜູ້ໃຊ້</a>
                   </li>
                   </li>
+
+                  <li class="nav-item">
+                    <li><a class="nav-link active" aria-current="page" href="{{route('admin.regist.index')}}"> <i style="color:red;font-style: normal;"> {{ $registors->count() }} </i> <i class="far fa-comment-dots"></i> ຂໍ້ມູນຮອງຂໍການເພິມຈຳນວນຫ້ອງເເຖວ</a>
+                    </li>
+                    </li>
+
                   <li class="nav-item">
 
 

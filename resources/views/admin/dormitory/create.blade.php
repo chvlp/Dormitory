@@ -44,10 +44,10 @@
                         <strong>ເລືອກເຈົ້າຂອງຫ້ອງເເຖວ</strong>
                         <select  name="user_id" class="form-control" placeholder="ຊື່ຫ້ອວເເຖວ">
                             <option value=""> ກະລຸນາເລືອກເຈົ້າຂອງຫ້ອງເເຖວ </option>
-                            @foreach ($registors as $item)
-                                @if($item->user_id)
-                                <option value="{{$item->user->id}}"> {{$item->user->name}} </option>
-                                @endif
+                            @foreach ($users as $item)
+                                {{-- @if($item->user_id) --}}
+                                <option value="{{$item->id}}"> {{$item->name}} </option>
+                                {{-- @endif --}}
                             @endforeach
                         </select>
                     </div>

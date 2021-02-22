@@ -4,6 +4,9 @@ namespace App\Http\Controllers\Admin\Regist;
 
 use App\Http\Controllers\Controller;
 use App\registor;
+use App\RegistorUser;
+use App\Role;
+use App\User;
 use Illuminate\Http\Request;
 
 class RegistController extends Controller
@@ -11,8 +14,9 @@ class RegistController extends Controller
     public function index()
     {
         $registors = registor::all();
-        // return $regists;
-        return view('admin.regist.index',compact('registors'));
+        $registUsers = RegistorUser::all();
+        $users = User::all();
+        return view('admin.regist.index',compact('registors','users','registUsers'));
 
     }
 

@@ -61,6 +61,12 @@ Route::get('/admin/comment',                    'Admin\Comment\CommentController
 Route::get('/delete/comment/{id}',              'Admin\Comment\CommentController@delete');
 Route::get('/comment/search',                   'Admin\Comment\CommentController@index');
 
+Route::get('/admin/registor',                   'Admin\Regist\RegistController@index')->name('admin.regist.index');
+Route::get('/admin/delete/registor/{id}',       'Admin\Regist\RegistController@Delete');
+
+Route::get('/admin/regist/user',                   'Admin\RegistUser\RegistController@index')->name('admin.registUser.index');
+Route::get('/admin/delete/registor/user/{id}',     'Admin\RegistUser\RegistController@Delete');
+
 // Dormit
 
 Route::get('/dormit',                           'Dormit\IndexController@index')->name('dormit.index');
@@ -106,7 +112,6 @@ Route::get('/dormit/registor',                        'Dormit\Regist\RegistContr
 Route::post('/dormit/registor/store',                 'Dormit\Regist\RegistController@store')->name('Dormit.regist.store');
 
 
-Route::get('/admin/registor',                   'Admin\Regist\RegistController@index')->name('admin.regist.index');
-Route::get('/admin/delete/registor/{id}',       'Admin\Regist\RegistController@Delete');
+
 
 // Route::get('/admin/registor', 'Admin\Regist\RegistController@index')->name('admin.regist.index');

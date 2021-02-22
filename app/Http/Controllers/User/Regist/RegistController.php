@@ -5,6 +5,7 @@ namespace App\Http\Controllers\User\Regist;
 use App\Dormitory;
 use App\Http\Controllers\Controller;
 use App\registor;
+use App\RegistorUser;
 use App\School;
 use App\User;
 use Illuminate\Http\Request;
@@ -16,8 +17,9 @@ class RegistController extends Controller
         $schools = School::with('dormitory')->get();
         $dormitorys = Dormitory::all();
         $regists = registor::all();
+        $registUsers = RegistorUser::all();
         // return $regists;
-        return view('user.regist.index',compact('regists','schools','dormitorys'));
+        return view('user.regist.index',compact('regists','schools','dormitorys','registUsers'));
 
     }
 
@@ -25,11 +27,13 @@ class RegistController extends Controller
     {
 
         // return $dormitory->id;
-        registor::create([
-           'user_id' =>auth()->user()->id,
-           'phone' =>request('phone'),
-           'qty' =>request('qty'),
-           'details' =>request('details')
+        RegistorUser::create([
+            'user_id' =>auth()->user()->id,
+            'qty' =>request('qty'),
+            'village' =>request('village'),
+            'distric' =>request('distric'),
+            'province' =>request('province'),
+            'details' =>request('details')
         ]);
         // $request->save();
         // return back();

@@ -27,6 +27,20 @@
                         </div>
 
                         <div class="form-group row">
+                            <label for="phone" class="col-md-4 col-form-label text-md-right"><i style="color:  #5499C7;" class="fas fa-phone-alt"></i> ເບີໂທ</label>
+
+                            <div class="col-md-6">
+                                <input id="phone" type="text" class="form-control @error('phone') is-invalid @enderror" name="phone" value="{{ old('phone') }}" required autocomplete="ເບີໂທ" autofocus>
+
+                                @error('phone')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right"><i style="color:  #5499C7;" class="far fa-envelope"></i> ທີ່ຢູ່ອີເມວ</label>
 
                             <div class="col-md-6">

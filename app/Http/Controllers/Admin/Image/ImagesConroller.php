@@ -4,7 +4,9 @@ namespace App\Http\Controllers\Admin\Image;
 
 use App\Dormitory;
 use App\Http\Controllers\Controller;
+use App\registor;
 use App\Image;
+use App\RegistorUser;
 use Illuminate\Http\Request;
 
 class ImagesConroller extends Controller
@@ -17,13 +19,16 @@ class ImagesConroller extends Controller
     public function index(Request $request)
     {
         if (empty($request->all())) {
+            $registors = registor::all();
+            $registUsers = RegistorUser::all();
             $images = Image::orderBy('id', 'desc')->paginate(5);
-            return view('admin.image.index',compact('images'));
+            return view('admin.image.index',compact('images','registors','registUsers'));
         }
             else{
+                $registors = registor::all();
                 $images= Image::where('dormitory_id','like','%'.$request->search.'%')
                 ->paginate(5);
-                return view('admin.image.index',compact('images'));
+                return view('admin.image.index',compact('images','registors'));
 
             }
 
@@ -35,8 +40,10 @@ class ImagesConroller extends Controller
 
     public function create()
     {
-         $dormitorys = Dormitory::all();
-         return view('admin.image.create',compact('dormitorys'));
+        $registors = registor::all();
+        $registUsers = RegistorUser::all();
+        $dormitorys = Dormitory::all();
+        return view('admin.image.create',compact('dormitorys','registors','registUsers'));
     }
 
 
@@ -63,9 +70,11 @@ class ImagesConroller extends Controller
 
     public function edit($id)
     {
+        $registors = registor::all();
+        $registUsers = RegistorUser::all();
         $dormitorys = Dormitory::all();
         $images = Image::with('dormitory')->find($id);
-        return view('admin.image.edit',compact('dormitorys','images'));
+        return view('admin.image.edit',compact('dormitorys','images','registors','registUsers'));
     }
 
     public function update(Request $request, $id)

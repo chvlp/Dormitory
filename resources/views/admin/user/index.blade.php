@@ -35,6 +35,7 @@
                     <tr>
 
                             <th width="30px">ຊື່ຜູ້ໃຊ້</th>
+                            <th width="30px">ເບິໂທ</th>
                             <th width="20px">ອີເມວ</th>
                             <th width="20px">ຕຳເເໜ່ງ</th>
                             <th width="5px">ເຫດການ</th>
@@ -42,6 +43,7 @@
                         @foreach ($users as $item)
                             <tr>
                                 <td>{{$item->name}}</td>
+                                <td>{{$item->phone}}</td>
                                 <td>{{$item->email}}</td>
                                 <td>{{ implode(', ', $item->roles()->get()->pluck('name')->toArray()) }}</td>
                                 <td>

@@ -67,7 +67,7 @@
                 <li class="dropdown user user-menu">
                   <!-- Menu Toggle Button -->
                   <li class="nav-item">
-                  <li><a class="nav-link active" aria-current="page" href="{{route('Dormit.regist.index')}}"><i class="far fa-comment-dots"></i> ສະໝັກເປັນເຈົ້າຂອງຫ້ອງເເຖວ</a>
+                  <li><a class="nav-link active" aria-current="page" href="{{route('Dormit.regist.index')}}">  ສະໝັກຈຳນວນຫ້ອງເເຖວເພິມ</a>
                   </li>
                   </li>
                   <li class="nav-item">

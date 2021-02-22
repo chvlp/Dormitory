@@ -4,7 +4,7 @@
 @section('contain')
 
     <section class="content-header">
-        <center><h1> ຂໍ້ມູນການຮອງຂໍເປັນເຈົ້າຂອງຫ້ອງເເຖວຈາກຜູ້ໃຊ້</h1></center>
+        <center><h1> ຂໍ້ມູນການຮອງຂໍເພີມຈຳນວນຫ້ອງເເຖວຈາກເຈົ້າຂອງຫ້ອງເເຖວ</h1></center>
     </section><br><br>
 
 
@@ -78,16 +78,11 @@
                                                 <div style="font-size: 13px"  class="card-body">
                                                     <p class="card-text">ຊື່: {{$item->user->name}}</p>
                                                     <p class="card-text">ອີເມວ: {{$item->user->email}}</p>
-                                                    <p class="card-text">ເບິໂທ: {{$item->phone}}</p>
-                                                    <p class="card-text">ຈຳນວນຫ້ອງເເຖວ: {{$item->qty}}</p>
+                                                    <p class="card-text">ເບິໂທ: {{$item->user->phone}}</p>
+                                                    <p class="card-text">ຈຳນວນຫ້ອງເເຖວ: <i style="font-style: normal;color:red;font-size:15px;"> {{$item->qty}}  </i> </p>
                                                     <p class="card-text">ລາຍລະອຽດ: {{$item->details}} </p>
                                                     <a href="{{URL::to('admin/delete/registor/'.$item->id)}}"><p class="card-text"><i class="fas fa-trash-alt"></i></p></a>
-                                                        {{-- <div class="moree">
-                                                            <button class="button button2"><a href="{{route('dongdok.index')}}">ລາຍລະອຽດ</a></button>
-                                                        </div> --}}
-
                                                 </div>
-
                                         </div>
                                     </div>
                                 {{-- @endif --}}

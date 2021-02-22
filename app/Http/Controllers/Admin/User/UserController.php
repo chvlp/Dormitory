@@ -3,11 +3,15 @@
 namespace App\Http\Controllers\Admin\User;
 
 use App\Http\Controllers\Controller;
+use App\registor;
+use App\RegistorUser;
 use App\Role;
 use App\User;
+use GuzzleHttp\Psr7\Message;
 use Illuminate\Support\Facades\Gate;
 // use Gate;
 use Illuminate\Http\Request;
+use Illuminate\Mail\Message as MailMessage;
 
 class UserController extends Controller
 {
@@ -24,14 +28,19 @@ class UserController extends Controller
     public function index(Request $request)
     {
         if (empty($request->all())) {
+
             $users = User::orderBy('id', 'desc')->paginate(5);
-            return view('admin.user.index',compact('users'));
+            $registors = registor::all();
+            $registUsers = RegistorUser::all();
+            return view('admin.user.index',compact('users','registors','registUsers'));
         }
             else{
+                $registors = registor::all();
                 $users = User::where('name','like','%'.$request->search.'%')
+                ->orWhere('phone','like','%'.$request->search.'%')
                 ->orWhere('email','like','%'.$request->search.'%')
                 ->paginate(5);
-                return view('admin.user.index',compact('users'));
+                return view('admin.user.index',compact('users','registors'));
             }
     }
 
@@ -77,7 +86,9 @@ class UserController extends Controller
     public function edit(User $user)
     {
         $roles = Role::all();
-        return view('admin.user.edit')->with([
+        $registors = registor::all();
+        $registUsers = RegistorUser::all();
+        return view('admin.user.edit',compact('roles','registors','registUsers'))->with([
             'user' => $user,
             'roles' => $roles
         ]);

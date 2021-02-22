@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name','phone','email', 'password',
     ];
 
     /**
@@ -49,6 +49,11 @@ class User extends Authenticatable
     public function registor()
     {
         return $this->hasMany(registor::class);
+    }
+
+    public function registor_user()
+    {
+        return $this->hasMany(RegistorUser::class);
     }
 
     public function roles()

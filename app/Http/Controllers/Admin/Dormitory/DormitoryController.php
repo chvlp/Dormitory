@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Dormitory;
 use App\registor;
 use App\School;
+use App\RegistorUser;
 use App\User;
 
 class DormitoryController extends Controller
@@ -23,10 +24,13 @@ class DormitoryController extends Controller
     public function index(Request $request)
     {
         if (empty($request->all())) {
+            $registors = registor::all();
+            $registUsers = RegistorUser::all();
             $dormitorys = Dormitory::orderBy('id', 'desc')->with('school')->paginate(5);
-            return view('admin.dormitory.index',compact('dormitorys'));
+            return view('admin.dormitory.index',compact('dormitorys','registors','registUsers'));
         }
             else{
+                $registors = registor::all();
                 $dormitorys= Dormitory::where('name','like','%'.$request->search.'%')
                 ->orWhere('village','like','%'.$request->search.'%')
                 ->orWhere('distric','like','%'.$request->search.'%')
@@ -36,8 +40,7 @@ class DormitoryController extends Controller
                 ->orWhere('phase','like','%'.$request->search.'%')
                 ->orWhere('price','like','%'.$request->search.'%')
                 ->paginate(5);
-            return view('admin.dormitory.index ', compact('dormitorys'));
-
+            return view('admin.dormitory.index',compact('dormitorys','registors'));
 
             }
     }
@@ -49,10 +52,12 @@ class DormitoryController extends Controller
      */
     public function create()
     {
+
         $registors = registor::all();
+        $registUsers = RegistorUser::all();
         $users = User::all();
         $schools = School::all();
-        return view('admin.dormitory.create',compact('schools','users','registors'));
+        return view('admin.dormitory.create',compact('schools','users','registors','registUsers'));
     }
 
     /**
@@ -102,10 +107,12 @@ class DormitoryController extends Controller
      */
     public function edit($id)
     {
+        $registors = registor::all();
+        $registUsers = RegistorUser::all();
         $users = User::all();
         $schools = School::all();
         $dormitorys = Dormitory::find($id)->where('id',$id)->first();
-        return view('admin.dormitory.edit',compact('schools','dormitorys','users'));
+        return view('admin.dormitory.edit',compact('schools','dormitorys','users','registors','registUsers'));
     }
 
     /**
@@ -156,8 +163,10 @@ class DormitoryController extends Controller
 
     public function show($id)
     {
+        $registors = registor::all();
+        $registUsers = RegistorUser::all();
         $dormitorys = Dormitory::find($id)->where('id',$id)->first();
-        return view('admin/dormitory/show',compact('dormitorys'));
+        return view('admin/dormitory/show',compact('dormitorys','registors','registUsers'));
 
     }
     /**

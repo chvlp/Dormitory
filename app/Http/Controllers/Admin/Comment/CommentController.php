@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Comment;
 use App\Dormitory;
+use App\registor;
+use App\RegistorUser;
 
 class CommentController extends Controller
 {
@@ -22,15 +24,18 @@ class CommentController extends Controller
     {
 
         if (empty($request->all())) {
+            $registors = registor::all();
+            $registUsers = RegistorUser::all();
             $comments = Comment::orderBy('id', 'desc')->paginate(5);
-            return view('admin.comment.index',compact('comments'));
+            return view('admin.comment.index',compact('comments','registors','registUsers'));
         }
             else{
+                $registors = registor::all();
                 $comments = Comment::where('body','like','%'.$request->search.'%')
                 ->orWhere('dormitory_id','like','%'.$request->search.'%')
                 ->orWhere('user_id','like','%'.$request->search.'%')
                 ->paginate(5);
-                return view('admin.comment.index',compact('comments'));
+                return view('admin.comment.index',compact('comments','registors'));
             }
     }
 
