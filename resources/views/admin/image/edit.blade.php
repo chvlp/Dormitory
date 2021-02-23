@@ -27,7 +27,7 @@
                         <strong>ຊື່ຫ້ອງເເຖວ</strong>
                             <select  name="dormitory_id" class="form-control">
                                 @foreach ($dormitorys as $item)
-                                    <option value="{{$item->id}}" {{$item->id == $images->dormitory_id ? 'selected' : ''}}> {{$item->name}} </option>
+                                    <option style="color:rgb(49, 164, 199);" value="{{$item->id}}" {{$item->id == $images->dormitory_id ? 'selected' : ''}}> {{$item->name}} </option>
                                 @endforeach
                         </select>
                     </div>

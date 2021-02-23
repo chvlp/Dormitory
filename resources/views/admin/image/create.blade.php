@@ -24,8 +24,9 @@
                     <div class="form-group">
                         <strong>ເລືອກຫ້ອງເເຖວ</strong>
                         <select  name="dormitory_id" class="form-control">
+                            <option style="color:red" value="">ກະລູນາເລືອກຫ້ອງເເຖວ</option>
                             @foreach ($dormitorys as $item)
-                                <option value="{{$item->id}}"> {{$item->name}} </option>
+                                <option style="color:rgb(49, 164, 199);" value="{{$item->id}}"> {{$item->name}} </option>
                             @endforeach
                         </select>
                     </div>

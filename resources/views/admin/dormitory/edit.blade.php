@@ -32,20 +32,18 @@
                         <strong>ເລືອກໂຮງຮຽນ</strong>
                             <select  name="school_id"  class="form-control">
                                 @foreach ($schools as $item)
-                                    <option value="{{$item->id}}" {{$item->id == $dormitorys->school_id ? 'selected' : ''}}> {{$item->name}} </option>
+                                    <option style="color:rgb(49, 164, 199);"  value="{{$item->id}}" {{$item->id == $dormitorys->school_id ? 'selected' : ''}}> {{$item->name}} </option>
                                 @endforeach
                         </select>
                     </div>
                 </div>
-
-                {{-- {{$schools}} --}}
 
                 <div class="col-xs-6 col-sm-6 col-md-6">
                     <div class="form-group">
                         <strong>ເລືອກເຈົ້າຂອງຫ້ອງເເຖວ</strong>
                         <select  name="user_id" class="form-control" placeholder="ຊື່ຫ້ອວເເຖວ">
                             @foreach ($users as $item)
-                                <option  value="{{$item->id}}" {{$item->id == $dormitorys->user_id ? 'selected' : ''}}> {{$item->name}} </option>
+                                <option style="color:rgb(49, 164, 199);"  value="{{$item->id}}" {{$item->id == $dormitorys->user_id ? 'selected' : ''}}> {{$item->name}} </option>
                             @endforeach
                         </select>
                     </div>
