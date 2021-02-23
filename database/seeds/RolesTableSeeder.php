@@ -1,5 +1,6 @@
 <?php
 
+use App\Role;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
@@ -12,10 +13,6 @@ class RolesTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('roles')->insert([
-        ['name' => 'ຜູ້ດູເເລລະບົບ'],
-        ['name' => 'ເຈົ້າຂອງຫ້ອງເເຖວ'],
-        ['name' => 'ຜູ້ໃຊ້']
-        ]);
+        factory(Role::class,3)->create();
     }
 }

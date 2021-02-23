@@ -18,7 +18,7 @@
         </div>
         </div> --}}
         <div style="margin-top: -45px;" class="col-md-4">
-            <form action="/dormitory/search" method="get" class="sidebar-form">
+            <form action="/dormit/search" method="get" class="sidebar-form">
                 <div class="input-group">
                 <input type="search" name="search" class="form-control" placeholder="ຄົນຫາ...">
                 <span class="input-group-btn">

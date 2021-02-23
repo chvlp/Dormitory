@@ -23,28 +23,29 @@
                 <div class="col-xs-6 col-sm-6 col-md-6">
                     <div class="form-group">
                         <strong>ຊື່ຫ້ອງເເຖວ</strong>
-                        <input type="text" name="name" class="form-control" value="{{$dormitorys->name}}">
+                        <input type="text" name="name" class="form-control" value="{{old('name') ?? $dormitorys->name}}">
                     </div>
                 </div>
 
                 <div class="col-xs-6 col-sm-6 col-md-6">
                     <div class="form-group">
                         <strong>ເລືອກໂຮງຮຽນ</strong>
-                            <select  name="school_id" class="form-control">
+                            <select  name="school_id"  class="form-control">
                                 @foreach ($schools as $item)
-                                    <option value="{{$item->id}}"> {{$item->name}} </option>
+                                    <option value="{{$item->id}}" {{$item->id == $dormitorys->school_id ? 'selected' : ''}}> {{$item->name}} </option>
                                 @endforeach
                         </select>
                     </div>
                 </div>
 
+                {{-- {{$schools}} --}}
+
                 <div class="col-xs-6 col-sm-6 col-md-6">
                     <div class="form-group">
                         <strong>ເລືອກເຈົ້າຂອງຫ້ອງເເຖວ</strong>
                         <select  name="user_id" class="form-control" placeholder="ຊື່ຫ້ອວເເຖວ">
-                            <option value=""> ກະລຸນາເລືອກເຈົ້າຂອງຫ້ອງເເຖວ </option>
                             @foreach ($users as $item)
-                                <option value="{{$item->id}}"> {{$item->name}} </option>
+                                <option  value="{{$item->id}}" {{$item->id == $dormitorys->user_id ? 'selected' : ''}}> {{$item->name}} </option>
                             @endforeach
                         </select>
                     </div>

@@ -25,7 +25,7 @@
                 <div class="col-xs-6 col-sm-6 col-md-6">
                     <div class="form-group">
                         <strong>ປ້ອນຊື່ຫ້ອງເເຖວ ຕາມດ້ວຍຊື່ຂອງເຈົ້າຂອງຫ້ອງເເຖວ</strong>
-                        <input type="text" name="name" class="form-control" value=" ຕົວຢ່າງ: {{$dormitorys->name}}">
+                        <input type="text" name="name" class="form-control" value="{{$dormitorys->name}}">
                     </div>
                 </div>
 
@@ -46,7 +46,7 @@
                         <select  name="user_id" class="form-control" placeholder="ຊື່ຫ້ອວເເຖວ">
                             <option value=""> ກະລຸນາເລືອກເຈົ້າຂອງຫ້ອງເເຖວ </option>
                             @foreach ($users as $item)
-                                <option value="{{$item->id}}"> {{$item->name}} </option>
+                                <option value="{{$item->id}}" selected> {{$item->name}} </option>
                             @endforeach
                         </select>
                     </div>
