@@ -12,7 +12,7 @@
         <div style="width:100%;" class="row">
             <div  class="col-lg-12 m-t-5">
                 <div style="padding-bottom:10px;" class="pull-right">
-                <a style="background-color:#5499C7;border:1px solid black;margin-right:-30px" class="btn btn-success" href="{{route('admin.user.index') }}"><i class="fas fa-university"></i> ກັບຄືນ</a><br>
+                <a style="background-color:#5499C7;border:1px solid black;margin-right:-30px" class="btn btn-success" href="{{route('admin.user.index') }}"><i class="fas fa-undo"></i> ກັບຄືນ</a><br>
             </div>
         </div>
         </div>
@@ -31,8 +31,8 @@
 
                 <div class="form-group row">
                     <div class="col-md-4">
-                        <h4>ຊື່ຜູ້ໃຊ້: {{$user->name}}</h4>
-                        <h4>ອີເມວ: {{$user->email}}</h4>
+                        <h4>ຊື່ຜູ້ໃຊ້: <i style="font-style: normal;color:rgb(71, 150, 214)">{{$user->name}}</i> </h4>
+                        <h4>ອີເມວ: <i style="font-style: normal;color:rgb(71, 150, 214)"> {{$user->email}}</i></h4>
                     </div>
                 </div>
 

@@ -12,6 +12,11 @@ use Illuminate\Http\Request;
 
 class RegistController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index()
     {
         $schools = School::with('dormitory')->get();

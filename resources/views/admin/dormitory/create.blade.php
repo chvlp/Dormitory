@@ -11,7 +11,7 @@
         <div class="row">
             <div class="col-lg-12 m-t-5">
                 <div class="pull-right">
-                    <a class="btn btn-success" href="{{ route('dormitory.index') }}">ກັບ</a>
+                    <a style="background-color:#5499C7;border:1px solid black;"  class="btn btn-success" href="{{ route('dormitory.index') }}"><i class="fas fa-undo"></i> ກັບ</a>
                 </div>
             </div>
         </div>

@@ -56,8 +56,8 @@
         <header class="main-header">
 
           <!-- Logo -->
-          <a  class="logo">
-           {{ Auth::user()->name}}
+          <a  style="text-decoration: none;cursor: context-menu;" class="logo">
+           <i style="text-decoration:none; font-style: normal;font-size: 24px;color:rgb(255, 255, 255);"><i class="fas fa-user"></i> {{ Auth::user()->name}}</i>
           </a>
           <!-- Header Navbar -->
 
