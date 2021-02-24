@@ -50,6 +50,13 @@ class ImagesConroller extends Controller
 
     public function store(Request $request)
     {
+        $request ->validate([
+            'dormitory_id' => 'required',
+            'images' => 'required'
+        ],[
+            'dormitory_id.required' => 'ກະລູນາເລືອກຫ້ອງເເຖວທີ່ຕ້ອງການເພິມຮູບພາບ',
+            'images.required' => 'ກະລູນາເພິມຮູບພາບ'
+        ]);
         // return $request;
         $images = array();
         $images['dormitory_id'] = $request->dormitory_id;
@@ -80,6 +87,12 @@ class ImagesConroller extends Controller
 
     public function update(Request $request, $id)
     {
+        $request ->validate([
+            'dormitory_id' => 'required',
+        ],[
+            'dormitory_id.required' => 'ກະລູນາເລືອກຫ້ອງເເຖວທີ່ຕ້ອງການເພິມຮູບພາບ',
+        ]);
+
         $images = array();
         $images['dormitory_id'] = $request->dormitory_id;
         $image = $request->file('images');

@@ -7,6 +7,7 @@ use App\RegistorUser;
 use App\School;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Symfony\Contracts\Service\Attribute\Required;
 
 class SchoolController extends Controller
 {
@@ -42,6 +43,25 @@ class SchoolController extends Controller
         return view('admin.school.create',compact('registors','registUsers'));
     }
     public function Store(Request $request){
+
+        $request->validate([
+            'name' => 'required | min:4',
+            'village' => 'required| min:2 ',
+            'distric' => 'required| min:3 ',
+            'province' => 'required| min:3',
+            'image' => 'required'
+        ],[
+            'name.required' => 'ກະລຸນາປ້ອນຊື່ໂຮງຮຽນ',
+            'name.min' => 'ຊື່ໂຮງຮຽນ ຕ້ອງຍາວກວ່າ 4 ຕົວອັກສອນ',
+            'village.required' => 'ກະລຸນາປ້ອນບ້ານ',
+            'village.min' => 'ກະລລຸນາປ້ອນບ້ານໃຫ້ຖືກຕ້ອງ',
+            'distric.required' => 'ກະລຸນາປ້ອນເມືອງ',
+            'distric.min' => 'ກະລລຸນາປ້ອນເມືອງໃຫ້ຖືກຕ້ອງ',
+            'province.required' => 'ກະລຸນາປ້ອນເເຂວງ',
+            'province.min' => 'ກະລລຸນາປ້ອນເເຂວງໃຫ້ຖືກຕ້ອງ',
+            'image.required' => 'ກະລຸນາເລືອກຮູບພາບ',
+
+        ]);
         $schools = array();
         $schools['name'] = $request->name;
         $schools['village'] = $request->village;
@@ -70,6 +90,23 @@ class SchoolController extends Controller
     }
 
     public function Update(Request $request,$id){
+
+        $request->validate([
+            'name' => 'required | min:4',
+            'village' => 'required| min:2 ',
+            'distric' => 'required| min:3 ',
+            'province' => 'required| min:3',
+        ],[
+            'name.required' => 'ກະລຸນາປ້ອນຊື່ໂຮງຮຽນ',
+            'name.min' => 'ຊື່ໂຮງຮຽນ ຕ້ອງຍາວກວ່າ 4 ຕົວອັກສອນ',
+            'village.required' => 'ກະລຸນາປ້ອນບ້ານ',
+            'village.min' => 'ກະລລຸນາປ້ອນບ້ານໃຫ້ຖືກຕ້ອງ',
+            'distric.required' => 'ກະລຸນາປ້ອນເມືອງ',
+            'distric.min' => 'ກະລລຸນາປ້ອນເມືອງໃຫ້ຖືກຕ້ອງ',
+            'province.required' => 'ກະລຸນາປ້ອນເເຂວງ',
+            'province.min' => 'ກະລລຸນາປ້ອນເເຂວງໃຫ້ຖືກຕ້ອງ',
+
+        ]);
         $schools = array();
         $schools['name'] = $request->name;
         $schools['village'] = $request->village;

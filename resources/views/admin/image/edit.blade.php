@@ -19,9 +19,6 @@
         <form action="{{url('update/image/'.$images->id)}}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="row">
-
-
-
                 <div class="col-xs-6 col-sm-6 col-md-6">
                     <div class="form-group">
                         <strong>ຊື່ຫ້ອງເເຖວ</strong>
@@ -31,15 +28,22 @@
                                 @endforeach
                         </select>
                     </div>
+                    @error('dormitory_id')
+                    <div style="padding:5px;border-radius: 5px;" class="alert-danger">
+                        <strong>ຜິດພາດ ! </strong> {{$message}}
+                    </div>
+                    @enderror
                 </div>
-
+            </div>
+            <div class="row">
                 <div class="col-xs-6 col-sm-12 col-md-12">
                     <div class="form-group">
                         <strong>ຮູບພາບໂຮງຮຽນ</strong>
                         <input type="file" name="images">
                     </div>
                 </div>
-
+            </div>
+            <div class="row">
                 <div class="col-xs-6 col-sm-12 col-md-12">
                     <div class="form-group">
                         <strong>ຮູບພາບເກົ່າ</strong>
@@ -47,7 +51,8 @@
                         <input type="hidden" name="old_logo" value="{{$images->images}}">
                     </div>
                 </div>
-
+            </div>
+            <div class="row">
                 <div class="col-xs-6 col-sm-12 col-md-12">
                     <button type="submit" class="btn btn-primary">ອັບເດດ</button>
                 </div>

@@ -7,19 +7,18 @@
     </section>
 
   <!-- Main content -->
-    <section class="content container-fluid">
+    <section style="width:80%" class="content container-fluid">
         <div class="row">
             <div class="col-lg-12 m-t-5">
-                <div class="pull-right">
+                <div class="pull-left">
                     <a class="btn btn-success" href="{{ route('image.index') }}">ກັບ</a>
                 </div>
             </div>
-        </div>
+        </div><br>
 
         <form action="{{route('image.store')}}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="row">
-
                 <div class="col-xs-6 col-sm-6 col-md-6">
                     <div class="form-group">
                         <strong>ເລືອກຫ້ອງເເຖວ</strong>
@@ -30,15 +29,27 @@
                             @endforeach
                         </select>
                     </div>
+                    @error('dormitory_id')
+                    <div style="padding:5px;border-radius: 5px;" class="alert-danger">
+                        <strong>ຜິດພາດ ! </strong> {{$message}}
+                    </div>
+                    @enderror
                 </div>
-
+            </div>
+            <div class="row">
                 <div class="col-xs-6 col-sm-12 col-md-12">
                     <div class="form-group">
                         <strong>ຮູບພາບ</strong>
                         <input type="file" name="images">
                     </div>
+                    @error('images')
+                    <div style="padding:5px;border-radius: 5px;" class="alert-danger">
+                        <strong>ຜິດພາດ ! </strong> {{$message}}
+                    </div>
+                    @enderror
                 </div>
-
+            </div>
+            <div class="row">
                 <div class="col-xs-6 col-sm-12 col-md-12">
                     <button type="submit" class="btn btn-primary">ເພິມ</button>
                 </div>

@@ -43,6 +43,9 @@
           background-color: #5499C7  ;
           color: white;
         }
+        .row{
+            display: flex;
+        }
         </style>
 
 </head>

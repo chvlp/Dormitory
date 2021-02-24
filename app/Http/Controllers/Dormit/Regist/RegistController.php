@@ -23,6 +23,15 @@ class RegistController extends Controller
 
     public function store(Request $request,Dormitory $dormitory,User $user)
     {
+        $request ->validate([
+            'qty' => 'required | max:1',
+            'details' => 'required | min:4 '
+        ],[
+            'qty.required' => 'ກະລຸນາປ້ອນຈຳນວນຫ້ອງເເຖວທີ່ຕ້ອງການໂຄສະນາ',
+            'qty.max' => 'ກະລຸນາປ້ອນຈຳນວນຕົວເລກບໍ່ເກິນ 1 ຕົວເລກ',
+            'details.required' => 'ກະລຸນາປ້ອນລາຍລະອຽດ',
+            'details.min' => 'ກະລຸນາປ້ອນລາຍລະອຽດ 4 ຕົວອັັກສອນຂື້ນໄປ'
+        ]);
 
         // return $dormitory->id;
         registor::create([

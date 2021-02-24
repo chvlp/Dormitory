@@ -29,6 +29,11 @@
                     <strong>ບ້ານ</strong>
                     <input type="text" name="village" class="form-control" placeholder=" ທີ່ຢູ່ ບ້ານ">
                 </div>
+                @error('village')
+                    <div style="padding:5px;border-radius: 5px;" class="alert-danger">
+                        <strong>ຜິດພາດ ! </strong> {{$message}}
+                    </div>
+                    @enderror
             </div>
 
             <div class="col-xs-6  ">
@@ -36,6 +41,11 @@
                     <strong>ເມືອງ</strong>
                     <input type="text" name="distric" class="form-control" placeholder=" ທີ່ຢູ່ ເມືອງ">
                 </div>
+                @error('distric')
+                    <div style="padding:5px;border-radius: 5px;" class="alert-danger">
+                        <strong>ຜິດພາດ ! </strong> {{$message}}
+                    </div>
+                    @enderror
             </div>
 
             <div class="col-xs-6  ">
@@ -43,6 +53,11 @@
                     <strong>ເເຂວງ</strong>
                     <input type="text" name="province" class="form-control" placeholder=" ທີ່ຢູ່ ເເຂວງ">
                 </div>
+                @error('province')
+                    <div style="padding:5px;border-radius: 5px;" class="alert-danger">
+                        <strong>ຜິດພາດ ! </strong> {{$message}}
+                    </div>
+                    @enderror
             </div>
 
             <div class="col-xs-6 ">
@@ -50,6 +65,11 @@
                     <strong>ລາຍລະອຽດ</strong>
                     <textarea type="text" name="details" class="form-control" placeholder=" ລາຍລະອຽດຕ່າງທີ່ຕ້ອງການບອກກັບເຈົ້າຂອງລະບົບ"></textarea>
                 </div>
+                @error('details')
+                    <div style="padding:5px;border-radius: 5px;" class="alert-danger">
+                        <strong>ຜິດພາດ ! </strong> {{$message}}
+                    </div>
+                    @enderror
             </div><br>
             <div class="col-xs-6 col-sm-12 col-md-12">
                 <br>
