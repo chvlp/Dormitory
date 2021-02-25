@@ -1,5 +1,5 @@
 @extends('layouts.user-layout')
-@section('title','ມະຫາວິທະຍາໄລ ດົງໂດກ')
+@section('title','ສະຖາບັນສຸດສະກະ')
 @section('contain')
 
     <div class="conta">
@@ -19,7 +19,7 @@
 
                                 <div style="margin-top: -50px;" class="locat">
                                     ເສັ້ນທາງໄປຫາ{{$item->name}}:
-                                    <a href="https://goo.gl/maps/ZHphLVChdFStYuCd6" target="_blank">
+                                    <a href="https://www.google.com/maps/place/Soutsaka+Institute+of+Technology/@17.989047,102.6289718,17z/data=!3m1!4b1!4m5!3m4!1s0x312467e7bdacc007:0xdbdc10482b55db93!8m2!3d17.9890419!4d102.6311605" target="_blank">
                                         <i class="fas fa-map-marked-alt"></i>
                                     </a>
                                 </div>

@@ -71,10 +71,10 @@
                     @auth
                         <a href="{{ url('user') }}">ໄປໜ້າຜູ້ໃຊ້</a>
                     @else
-                        <a href="{{ route('login') }}">ເຂົ້າສູ່ລະບົບ</a>
+                        <a style="color: #5499C7;" href="{{ route('login') }}"><i style="color:  #5499C7;" class="fas fa-sign-in-alt"></i> ເຂົ້າສູ່ລະບົບ</a>
 
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}">ສະໝັກສະມາຊິກ</a>
+                            <a style="color: #5499C7;" href="{{ route('register') }}"> <i style="color:  #5499C7;" class="fas fa-user-plus"></i> ສະໝັກສະມາຊິກ</a>
                         @endif
                     @endauth
                 </div>

@@ -1,6 +1,6 @@
 
 @extends('layouts.admin-layout')
-@section('title','ຈັດການຂໍ້ມູນໂຮງຮຽນ')
+@section('title','ຈັດການຂໍ້ມູນການສະໝັກເປັນເຈົ້າຂອງຫ້ອງເເຖວ')
 @section('contain')
 
     <section class="content-header">

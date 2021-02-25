@@ -1,5 +1,5 @@
 @extends('layouts.dormitory-layout')
-@section('title','ມະຫາວິທະຍາໄລ ດົງໂດກ')
+@section('title','ລາຍລະອຽດຫ້ອງເເຖວໃນ ມະຫາວິທະຍາໄລ ດົງໂດກ')
 @section('contain')
 
 

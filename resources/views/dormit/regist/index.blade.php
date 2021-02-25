@@ -1,6 +1,6 @@
 @extends('layouts.dormit-layout')
 
-@section('title','ໜ້າສະໝັກເປັນເຈົ້າຂອງຫ້ອງເເຖວ')
+@section('title','ໜ້າສະໝັກໂຄສະນາຫ້ອງເເຖວ')
 
     @section('contain')
     <br><br><br>

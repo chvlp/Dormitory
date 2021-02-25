@@ -11,7 +11,7 @@
     {{-- <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <!-- CSS only --> --}}
-   <title>Responsive Navbar</title>
+   <title>@yield('title')</title>
 
 
    <!-- CSS only -->
@@ -612,6 +612,48 @@ a{
 
     }
 
+    .mainnn{
+    max-width: 1200px;
+    margin: auto;
+    padding: 50px 20px;
+    background:rgb(255, 255, 255,0.50);
+}
+
+.carddd{
+    width: 1100px;
+    padding: 20px 20px 20px 30px;
+    display: flex;
+}
+
+.img img{
+    border-radius: 500%;
+    width: 100%;
+    height: 100%;
+
+}
+
+.img{
+    width: 340px;
+    height: 320px;
+}
+
+.text{
+    width: 700px;
+    padding:5rem;
+    /* display: flex; */
+    align-items: center;
+    line-height: 1.5em;
+}
+.text h1{
+    color: #0099ff;
+    font-size: 20px;
+
+}
+hr{
+    color: #0099ff;
+}
+
+
 
 
 
@@ -714,7 +756,7 @@ a{
                                             <a href="{{route('user.regist.index')}}">ສະໝັກເປັນເຈົ້າຂອງຫ້ອງເເຖວ</a>
                                         </li>
                                         <li class="dropdown-link">
-                                            <a href="#">ກ່ຽວກັບເຮົາ</a>
+                                            <a href=" {{route ('user.about')}} ">ກ່ຽວກັບເຮົາ</a>
                                         </li>
                                         <li  style="font-family: Phetsarath OT;"class="dropdown-link">
                                             <a href="{{ route('logout') }}"

@@ -1,5 +1,5 @@
 @extends('layouts.dormit-layout')
-@section('title','ເເກ້ໄຂຂໍ້ມູນໂຮງຮຽນ')
+@section('title','ເເກ້ໄຂຂໍ້ມູນຫ້ອງເເຖວ')
 @section('contain')
 
     <section class="content-header">

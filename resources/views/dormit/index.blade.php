@@ -1,5 +1,5 @@
 @extends('layouts.dormit-layout')
-@section('title','ຈັດການຂໍ້ມູນໂຮງຮຽນ')
+@section('title','ໜ້າຫຼັກ ເຈົ້າຂອງຫ້ອງເເຖວ')
 @section('contain')
 
     <div style="text-align: center;margin-top:20%">

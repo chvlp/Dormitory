@@ -1,5 +1,5 @@
 @extends('layouts.user-layout')
-@section('title','ມະຫາວິທະຍາໄລ ດົງໂດກ')
+@section('title','ຄະນະວິສະວະກຳສາດ')
 @section('contain')
 
     <div class="conta">
@@ -19,7 +19,7 @@
 
                                 <div style="margin-top: -50px;" class="locat">
                                     ເສັ້ນທາງໄປຫາ{{$item->name}}:
-                                    <a href="https://goo.gl/maps/ZHphLVChdFStYuCd6" target="_blank">
+                                    <a href="https://www.google.com/maps/place/Faculty+of+Engineering+(NUOL)/@17.9382428,102.6239951,15.89z/data=!4m5!3m4!1s0x3124661fa3be608d:0x1033c20d059359d0!8m2!3d17.9396795!4d102.6240259" target="_blank">
                                         <i class="fas fa-map-marked-alt"></i>
                                     </a>
                                 </div>

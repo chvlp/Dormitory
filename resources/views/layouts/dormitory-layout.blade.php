@@ -747,7 +747,7 @@ section{
                                 <a href="{{route('user.regist.index')}}">ສະໝັກເປັນເຈົ້າຂອງຫ້ອງເເຖວ</a>
                             </li>
                             <li class="dropdown-link">
-                                <a href="#">ກ່ຽວກັບເຮົາ</a>
+                                <a href=" {{route ('user.about')}} ">ກ່ຽວກັບເຮົາ</a>
                             </li>
 
                             <li class="dropdown-link">

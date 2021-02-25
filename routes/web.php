@@ -30,6 +30,8 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->middleware('can:seen
     });
 Route::get('/user/search',                          'Admin\User\UserController@index');
 
+Route::get('user/about',                            'User\About\AboutController@index')->name('user.about');
+
 
 Route::get('/admin/school',                         'Admin\School\SchoolController@index')->name('school.index');
 Route::get('/admin/create/school',                   'Admin\School\SchoolController@create')->name('school.create');

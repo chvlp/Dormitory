@@ -1,6 +1,6 @@
 @extends('layouts.user-layout')
 
-@section('title','ໜ້າສະໝັກເປັນເຈົ້າຂອງຫ້ອງເເຖວ')
+@section('title','ສະໝັກເປັນເຈົ້າຂອງຫ້ອງເເຖວ')
 
     @section('contain')
     <br><br><br>
