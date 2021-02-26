@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin\RegistUser;
 use App\Http\Controllers\Controller;
 use App\registor;
 use App\RegistorUser;
+use App\Role;
 use App\User;
 use Illuminate\Http\Request;
 
@@ -27,6 +28,8 @@ class RegistController extends Controller
         return view('admin.registUser.index',compact('registors','users','registUsers'));
 
     }
+
+
 
     public function Delete($id)
     {

@@ -81,7 +81,8 @@
                                                     <p class="card-text">ເບິໂທ: {{$item->user->phone}}</p>
                                                     <p class="card-text">ຈຳນວນຫ້ອງເເຖວ: <i style="font-style: normal;color:red;font-size:15px;"> {{$item->qty}}  </i> </p>
                                                     <p class="card-text">ລາຍລະອຽດ: {{$item->details}} </p>
-                                                    <a href="{{URL::to('admin/delete/registor/'.$item->id)}}"><p class="card-text"><i class="fas fa-trash-alt"></i></p></a>
+                                                    <a style="text-align: left;" class="btn btn-primary" href="{{route('dormitory.create')}}"><i class="far fa-plus-square"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                    <a style="text-align: right" class="btn btn-primary" href="{{URL::to('admin/delete/registor/'.$item->id)}}"><i class="fas fa-trash-alt"></i></a>
                                                 </div>
                                         </div>
                                     </div>

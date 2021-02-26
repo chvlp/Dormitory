@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title')</title>
-    <link rel="stylesheet" href="../../../css/AminLTE.min.css">
-    <link rel="stylesheet" href="../../../css/boostrap.min.css">
+    <link rel="stylesheet" href="../../../../css/AminLTE.min.css">
+    <link rel="stylesheet" href="../../../../css/boostrap.min.css">
     {{-- <link rel="stylesheet" href="../../css/fontawesome.min.css"> --}}
-    <link rel="stylesheet" href="../../../css/ionicons.min.css">
-    <link rel="stylesheet" href="../../../css/skinblue.min.css">
+    <link rel="stylesheet" href="../../../../css/ionicons.min.css">
+    <link rel="stylesheet" href="../../../../css/skinblue.min.css">
     <script src="https://kit.fontawesome.com/73f13da6d0.js" crossorigin="anonymous"></script>
 
 

@@ -69,6 +69,7 @@ Route::get('/admin/delete/registor/{id}',       'Admin\Regist\RegistController@D
 Route::get('/admin/regist/user',                   'Admin\RegistUser\RegistController@index')->name('admin.registUser.index');
 Route::get('/admin/delete/registor/user/{id}',     'Admin\RegistUser\RegistController@Delete');
 
+
 // Dormit
 
 Route::get('/dormit',                           'Dormit\IndexController@index')->name('dormit.index');

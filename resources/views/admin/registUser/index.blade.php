@@ -82,7 +82,11 @@
                                                     <p class="card-text">ເມືອງ: {{$item->distric}}</p>
                                                     <p class="card-text">ເເຂວງ: {{$item->province}}</p>
                                                     <p class="card-text">ລາຍລະອຽດ: {{$item->details}} </p>
-                                                    <a href="{{URL::to('admin/delete/registor/user/'.$item->id)}}"><p class="card-text"><i class="fas fa-trash-alt"></i></p></a>
+                                                    {{-- @if($item->user_id > Auth()->user()->id) --}}
+                                                    <a class="btn btn-primary" href="{{route('admin.user.edit',$item->id-5) }}"><i class="fas fa-edit"></i></a>
+                                                    {{-- @endif --}}
+                                                    <a class="btn btn-primary" href="{{URL::to('admin/delete/registor/user/'.$item->id)}}"><i class="fas fa-trash-alt"></i></a>
+
                                                 </div>
                                         </div>
                                     </div>
