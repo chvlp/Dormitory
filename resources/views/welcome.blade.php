@@ -63,12 +63,15 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+            .hhhh{
+                color: blue;
+            }
         </style>
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
+        <div  class="flex-center position-ref full-height">
             @if (Route::has('login'))
-                <div class="top-right links">
+                <div style="box-shadow: blacks;" class="top-right links">
                     @auth
                         <a href="{{ url('user') }}">ໜ້າຜູ້ໃຊ້</a>
                     @else
@@ -81,9 +84,14 @@
                 </div>
             @endif
             <div class="content">
-                <div class="title m-b-md">
-                    {{('ຍິນດີຕອນຮັບ')}}
+               <div  class="hhhh">
+                   <div style="font-size: 70px;margin-bottom:-120px;" class="hjhj">
+                       <h1>ຍິນດີຕອນຮັບ</h1>
+                   </div>
+                   <div style="font-size: 40px;" class="hj">
+                    <h1>ເຂົ້າສູ່ເວບເເນະນຳຫ້ອງເເຖວ</h1>
                 </div>
+               </div>
 
             </div>
         </div>
