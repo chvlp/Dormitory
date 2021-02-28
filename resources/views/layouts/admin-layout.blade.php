@@ -46,6 +46,17 @@
         .row{
             display: flex;
         }
+        .ggg{
+            display: flex;
+
+        }
+        .ff{
+            padding-right: 80px;
+            text-align: left;
+        }
+        .hh{
+            text-align: right;
+        }
         </style>
 
 </head>

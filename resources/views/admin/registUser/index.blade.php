@@ -73,19 +73,28 @@
                             @foreach ($registUsers as $key => $item)
                                 {{-- @if ($item->id==1) --}}
                                     <div style="width: 185px;height:auto;" class="col-md-4">
-                                        <div style="padding:1px 5px 1px 5px;border-radius:5px;border: 1px solid  #5499C7 ; width: 150px;height:auto;" class="card mb-4 box-shadow">
+                                        <div style="padding:15px 15px 15px 15px;border-radius:5px;border: 1px solid  #5499C7 ; width: 150px;height:auto;" class="card mb-4 box-shadow">
                                             <img style="border-radius: 5px;" class="card-img-top" src="http://pushshift.io/wp-content/uploads/2019/06/user-management_3.jpg" height="65px" width="100%" alt="Card image cap">
                                                 <div style="font-size: 13px"  class="card-body">
-                                                    <p class="card-text">ຊື່: {{$item->user->name}}</p>
-                                                    <p class="card-text">ເບິໂທ: {{$item->user->phone}}</p>
+                                                    <p class="card-text">ຊື່: <i style="font-style:normal;color:#5499C7"> {{$item->user->name}}</i></p>
+                                                    <p class="card-text">ເບິໂທ:<i style="font-style:normal;color:#5499C7"> {{$item->user->phone}} </i></p>
                                                     <p class="card-text">ບ້ານ: {{$item->village}}</p>
                                                     <p class="card-text">ເມືອງ: {{$item->distric}}</p>
                                                     <p class="card-text">ເເຂວງ: {{$item->province}}</p>
                                                     <p class="card-text">ລາຍລະອຽດ: {{$item->details}} </p>
                                                     {{-- @if($item->user_id > Auth()->user()->id) --}}
-                                                    <a class="btn btn-primary" href="{{route('admin.user.edit',$item->id-5) }}"><i class="fas fa-edit"></i></a>
+                                                    <div  class="ggg">
+                                                        <div class="ff">
+                                                            <a href="{{route('admin.user.edit',$item->id-5) }}"><i class="fas fa-edit"></i></a>
+
+                                                        </div>
+                                                        <div class="hh">
+                                                            <a  style="color:red;" href="{{URL::to('admin/delete/registor/user/'.$item->id)}}"><i class="fas fa-trash-alt"></i></a>
+
+                                                        </div>
+                                                    </div>
+
                                                     {{-- @endif --}}
-                                                    <a class="btn btn-primary" href="{{URL::to('admin/delete/registor/user/'.$item->id)}}"><i class="fas fa-trash-alt"></i></a>
 
                                                 </div>
                                         </div>
