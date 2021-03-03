@@ -1,6 +1,6 @@
 
 @extends('layouts.admin-layout')
-@section('title','ຈັດການຂໍ້ມູນໂຮງຮຽນ')
+@section('title','ໜ້າຫຼັກເຈົ້າຂອງລະບົບ')
 @section('contain')
 
 <div style="text-align: center;margin-top:20%">
