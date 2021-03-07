@@ -140,7 +140,7 @@
                     <div class="col-xs-6 col-sm-6 col-md-6">
                         <div class="form-group">
                             <strong>ກະລຸນາກ໋ອບປີທີ່ຕຳເເໜງຂອງຫ້ອງເເຖວ </strong>
-                            <input type="text" name="locat" class="form-control" value="{{$dormitorys->locat}}">
+                            <textarea style="height: 35px;" type="text" name="locat" class="form-control" value="{{$dormitorys->locat}}">{{$dormitorys->locat}}</textarea>
                         </div>
                         @error('locat')
                         <div style="padding:5px;border-radius: 5px;" class="alert-danger">
@@ -165,7 +165,7 @@
                     <div class="col-xs-6 col-sm-6 col-md-6">
                         <div class="form-group">
                             <strong>ລາຍລະອຽດຂອງຫ້ອງເເຖວ</strong>
-                            <input type="text" name="detail" class="form-control" value="{{$dormitorys->detail}}">
+                            <textarea type="text" name="detail" class="form-control" value="{{$dormitorys->detail}}">{{$dormitorys->detail}}</textarea>
                         </div>
                         @error('detail')
                         <div style="padding:5px;border-radius: 5px;" class="alert-danger">

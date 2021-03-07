@@ -154,6 +154,7 @@ class DormitoryController extends Controller
      */
     public function update(Request $request, $id)
     {
+
         $request->validate([
 
             'name' => 'required | min:4',
@@ -168,7 +169,6 @@ class DormitoryController extends Controller
             'locat' => 'required | min:4',
             'price' => 'required | min:4',
             'detail' => 'required | min:4',
-            'image' => 'required | min:4',
             ],[
             'name.required' => 'ກະລູນາປ້ອນຊື່ຫ້ອງເເຖວ',
             'school_id.required' => 'ກະລູນາເລືອກຊື່ໂຮງຮຽນ',
@@ -182,9 +182,9 @@ class DormitoryController extends Controller
             'locat.required' => 'ກະລູນາປ້ອນຂໍ້ມຸນທີ່່ຢູ່ຂອງຫ້ອງເເຖວ',
             'price.required' => 'ກະລູນາປ້ອນລາຄ່າ',
             'detail.required' => 'ກະລູນປ້ອນລາຍລະອຽດ',
-            'image.required' => 'ກະລູນາເລືອກຮູບພາບ',
             ]);
-            
+
+
         $dormitorys = array();
         $dormitorys['school_id'] = $request->school_id;
         $dormitorys['user_id'] = $request->user_id;

@@ -57,7 +57,7 @@
                             <option value=""> ກະລຸນາເລືອກເຈົ້າຂອງຫ້ອງເເຖວ </option>
                             @foreach ($registors as $item)
                                 {{-- @if($item->user_id) --}}
-                                <option value="{{$item->id}}"> {{$item->user->name}} </option>
+                                <option value="{{$item->user->id}}"> {{$item->user->name}} </option>
                                 {{-- @endif --}}
                             @endforeach
                         </select>
@@ -149,7 +149,7 @@
                     <div class="col-xs-6 col-sm-6 col-md-6">
                         <div class="form-group">
                             <strong>ຕຳເເໜງ</strong>
-                            <input type="text" name="locat" class="form-control" placeholder="ຕຳເເໜງ ">
+                            <textarea style="height: 35px" type="text" name="locat" class="form-control" placeholder="ຕຳເເໜງ "></textarea>
                         </div>
                         @error('locat')
                         <div style="padding:5px;border-radius: 5px;" class="alert-danger">
