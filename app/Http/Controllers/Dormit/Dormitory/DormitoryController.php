@@ -124,7 +124,7 @@ class DormitoryController extends Controller
             'province' => 'required | min:4',
             'phone' => 'required | min:4',
             'horm' => 'required | min:4',
-            'phase' => 'required | min:4',
+            'phase' => 'required | min:3',
             'locat' => 'required | min:4',
             'price' => 'required | min:4',
             'detail' => 'required | min:4',

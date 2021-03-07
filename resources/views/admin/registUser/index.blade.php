@@ -85,7 +85,7 @@
                                                     {{-- @if($item->user_id > Auth()->user()->id) --}}
                                                     <div  class="ggg">
                                                         <div class="ff">
-                                                            <a href="{{route('admin.user.edit',$item->id-5) }}"><i class="fas fa-edit"></i></a>
+                                                            <a href="{{route('admin.user.edit',$item->id+1) }}"><i class="fas fa-edit"></i></a>
 
                                                         </div>
                                                         <div class="hh">

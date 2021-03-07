@@ -653,11 +653,39 @@ hr{
     color: #0099ff;
 }
 
+.tumn{
 
-
-
-
-
+    border-radius: 4px;
+    height: auto;
+    width: 50%;
+    padding: 2rem;
+    margin: auto;
+    text-align: center;
+}
+.tumn .outtumn span{
+    font-style: normal;
+    font-size: 20px;
+    font-weight: bold;
+    padding-bottom: 0.5rem;
+    color: black;
+}
+.tumn .intumn{
+    width: 250px;
+    text-align: left;
+    margin: auto;
+}
+.tumn .intumn span{
+    padding: 2rem;
+    font-size: 17px;
+    font-style: oblique;
+    font-weight: bold;
+    color: #0099ff;
+    margin-left: 4rem;
+}
+.tumn i{
+    font-size: 15px;
+    font-style: normal;
+}
     </style>
 </head>
 

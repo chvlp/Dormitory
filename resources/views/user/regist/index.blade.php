@@ -5,9 +5,21 @@
     @section('contain')
     <br><br><br>
 
-    <section class="content-header">
+    <section style="margin-top: 50px;" class="content-header">
         <center><h1> ສະໝັກເປັນເຈົ້າຂອງຫ້ອງເເຖວ</h1></center>
     </section>
+
+    <div  class="tumn">
+        <div class="outtumn">
+            <span>ຕຳເເໜ່ງປະຈຸບັນຂອງທ່ານເເມ່ນ</span>
+        </div>
+        @foreach ( Auth()->user()->roles as $item)
+        <div class="intumn">
+            <span> <i class="fas fa-user-tie"></i> {{ $item->name }} <br></span>
+        </div>
+        @endforeach
+        <i>ຖ້າຕຳເເໜ່ງຂອງທ່ານມີການປ່ຽນເເປ່ງກະລຸນາ ອອອກຈາກລະບົບ ເເລະ ເຂົ້າສູ່ລະບົບໃໝ່</i>
+    </div>
 
 
     @if ($message = Session::get('succes'))
