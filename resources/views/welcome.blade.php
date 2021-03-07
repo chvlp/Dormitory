@@ -80,7 +80,7 @@
                         Somethings Wrong please
                         <a class="nav-link" href="{{ route('logout') }}"
                         onclick="event.preventDefault();
-                        document.getElementById('logout-form').submit();"> <i style="color:  #5499C7;" class="fas fa-sign-in-alt"></i> Clik here </a>
+                        document.getElementById('logout-form').submit();"> <i style="color:  #5499C7;" class="fas fa-sign-in-alt"></i><i style="color: red">Clik here </i> </a>
                         and login again
 
 
