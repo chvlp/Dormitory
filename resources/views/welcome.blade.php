@@ -71,28 +71,44 @@
         <div  class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div style="box-shadow: blacks;" class="top-right links">
+
                     @auth
-                        <a href="{{ url('user') }}">ໜ້າຜູ້ໃຊ້</a>
+
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                        @csrf
+                    </form>
+                        Somethings Wrong please
+                        <a class="nav-link" href="{{ route('logout') }}"
+                        onclick="event.preventDefault();
+                        document.getElementById('logout-form').submit();"> <i style="color:  #5499C7;" class="fas fa-sign-in-alt"></i> Clik here </a>
+                        and login again
+
+
+
+                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                        @csrf
+                    </form>
                     @else
                         <a style="color:#5499C7;" href="{{ route('login') }}"> <i style="color:  #5499C7;" class="fas fa-sign-in-alt"></i> ເຂົ້າສູ່ລະບົບ</a>
 
                         @if (Route::has('register'))
                             <a style="color: #5499C7;" href="{{ route('register') }}"><i style="color:  #5499C7;" class="fas fa-user-plus"></i> ສະໝັກສະມາຊິກ</a>
                         @endif
-                    @endauth
                 </div>
-            @endif
-            <div class="content">
-               <div  class="hhhh">
-                   <div style="font-size: 70px;margin-bottom:-120px;" class="hjhj">
-                       <h1>ຍິນດີຕອນຮັບ</h1>
-                   </div>
-                   <div style="font-size: 40px;" class="hj">
-                    <h1>ເຂົ້າສູ່ເວບເເນະນຳຫ້ອງເເຖວ</h1>
-                </div>
-               </div>
+                <div style="width:100%" class="content"><hr style="margin-top:-50px;color:#5499C7;">
+                    <div class="hhhh">
+                        <div style="font-size: 70px;margin-bottom:-120px;" class="hjhj">
+                            <h1>ຍິນດີຕອນຮັບ</h1>
+                        </div>
+                        <div style="font-size: 40px;" class="hj">
+                         <h1>ເຂົ້າສູ່ເວບເເນະນຳຫ້ອງເເຖວ</h1>
+                     </div>
+                    </div>
 
-            </div>
+                </div>
+                @endauth
+            @endif
+
         </div>
     </body>
 </html>
