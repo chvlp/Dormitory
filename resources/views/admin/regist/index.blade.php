@@ -73,7 +73,7 @@
                             @foreach ($registors as $key => $item)
                                 {{-- @if ($item->id==1) --}}
                                     <div style="width: 185px;height:auto;" class="col-md-4">
-                                        <div style="padding:15px 15px 15px 15px;border-radius:5px;border: 1px solid  #5499C7 ; width: 150px;height:auto;" class="card mb-4 box-shadow">
+                                        <div style="padding:15px 15px 15px 15px;border-radius:5px;border: 1px solid  #5499C7 ; width: 150px;height:auto;background:#cfecff" class="card mb-4 box-shadow">
                                             <img style="border-radius: 5px;" class="card-img-top" src="http://pushshift.io/wp-content/uploads/2019/06/user-management_3.jpg" height="65px" width="100%" alt="Card image cap">
                                                 <div style="font-size: 13px"  class="card-body">
                                                     <p class="card-text">ຊື່: {{$item->user->name}}</p>
