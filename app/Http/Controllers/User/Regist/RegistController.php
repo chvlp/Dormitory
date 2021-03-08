@@ -57,7 +57,7 @@ class RegistController extends Controller
         // $request->save();
         // return back();
         return redirect()->route('user.regist.index')
-        ->with('succes', 'ການສະໝັກສະມາຊິກເປັນເຈົ້າຂອງຫ້ອງເເຖວສຳເລັດກະລຸນາລໍຖ້າການຕິດຕໍ່ກັບ ຂໍຂອບໃຈ');
+        ->with('succes', 'ການສະໝັກສະມາຊິກເປັນເຈົ້າຂອງຫ້ອງເເຖວສຳເລັດກະລຸນາລໍຖ້າ ພວກເຮົາກຳລັງດຳເນີນງານ ຂໍຂອບໃຈ');
     }
 
 

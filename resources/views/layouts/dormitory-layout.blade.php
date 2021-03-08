@@ -658,7 +658,8 @@ section{
             <input type="checkbox" name="" id="check">
 
             <div class="logo-container">
-                <p style="font-size: 18px; color:white;">Powered By © AlignDev</p>
+                <p style="font-size: 18px; color:white;">
+                   <a style="color: white" href="{{route('user.index')}}">AlignDev</a> </p>
             </div>
 
             <div class="nav-btn">
@@ -740,14 +741,32 @@ section{
             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                 @csrf
                 <li style="padding-left: 25px" class="nav-link" style="--i: 1.1s">
-                    <a style="cursor:context-menu;" ><i style="margin-top:-6px;margin-right:6px;" class="far fa-user"></i> {{ Auth::user()->name }} <i class="fas fa-caret-down"></i></a>
+                    <a style="cursor:context-menu;" ><i style="margin-top:-6px;margin-right:6px;" class="far fa-user"></i> {{ Auth::user()->name }} <i class="fas fa-caret-down"></i>
+                        @foreach ( Auth::user()->roles as $item)
+                        @if  ($item->id==2)
+                        <i style="color: red">*</i>
+                        @endif
+                    @endforeach
+
+                    </a>
                     <div class="dropdown">
                         <ul>
                             <li  class="dropdown-link">
-                                <a href="{{route('user.regist.index')}}">ສະໝັກເປັນເຈົ້າຂອງຫ້ອງເເຖວ</a>
+                                <ul style="margin-top: -10px;">
+                                    <li  class="dropdown-link">
+                                        @foreach ( Auth::user()->roles as $item)
+                                            @if  ($item->id==3)
+                                            <a href="{{route('user.regist.index')}}">ສະໝັກເປັນເຈົ້າຂອງຫ້ອງເເຖວ</a>
+                                            @endif
+                                            @if($item->id==2)
+                                                <a href=" {{route ('user.nonti')}} ">  <span style="color: white;font-weight: normal;">ເເຈ້ງເຕືອນ</span> <i style="color: rgb(145, 0, 0);font-weight: normal;font-style:normal;">{{$item->count()-2}} </i></a>
+                                            @endif
+                                        @endforeach
+                                        <a href=" {{route ('user.about')}} ">ກ່ຽວກັບເຮົາ</a>
+
+                                    </li>
                             </li>
                             <li class="dropdown-link">
-                                <a href=" {{route ('user.about')}} ">ກ່ຽວກັບເຮົາ</a>
                             </li>
 
                             <li class="dropdown-link">
@@ -773,15 +792,48 @@ section{
 
 @yield('contain')
 
-
-<hr style="border: 1px solid  #0099ff;">
-    <div class="containn">
-        <div class="foott">
-            <div class="txt">
-                <p>Powered By © AlignDev</p>
-            </div>
+<hr>
+{{-- <hr style="border: 1px solid  #0099ff;"> --}}
+<!-- Footer Section -->
+<div style="padding: 1rem;" class="footer__container">
+    <div class="social__media">
+      <div class="social__media--wrap">
+        <div style="text-align: center;
+                    font-weight: bold;
+                    color:#3183ac;
+                    font-size:21px;
+                    padding:1rem;
+                    " class="footer__logo">
+          <a href="/" id="footer__logo">AlignDev</a>
         </div>
+        <p  style="text-align: center;
+                    font-size: 15px;" class="website__rights">© AlignDev 2020. All rights reserved</p>
+        <div  style="text-align: center;
+                    font-size: 19px;
+                    color:#3183ac;
+                    padding:1rem;
+                    " class="social__icons">
+          <a style="padding: 1rem;" href="https://www.facebook.com/FlikTwoWiz1/" class="social__icon--link" target="_blank"
+            ><i class="fab fa-facebook"></i
+          ></a>
+          <a style="padding: 1rem;color:#bc2a8d" href="/" class="social__icon--link"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a style="padding: 1rem;color:red;" href="/" class="social__icon--link"
+            ><i class="fab fa-youtube"></i
+          ></a>
+          <a style="padding: 1rem;color:#1DA1F2" href="/" class="social__icon--link"
+            ><i class="fab fa-twitter"></i
+          ></a>
+          <a style="padding: 1rem;color:#4FCE5D" href="/" class="social__icon--link"
+            ><i class="fab fa-whatsapp"></i
+          ></a>
+          <a style="padding: 1rem;cursor: context-menu;" class="social__icon--link"
+            ><i class="fas fa-phone"> <span style="color: black;font-size:15px;font-weight:normal;font-style: normal;">+856 20 778 878 77</span> </i></a>
+        </div>
+      </div>
     </div>
+  </div>
 
     <script src="https://kit.fontawesome.com/73f13da6d0.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"

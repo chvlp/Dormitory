@@ -46,6 +46,6 @@ class RegistController extends Controller
         // $request->save();
         // return back();
         return redirect()->route('Dormit.regist.index')
-        ->with('succes', 'ການສະໝັກເພິມຈຳນວນຫ້ອງເເຖວສຳເລັດ ກະລະນາລໍຖ້າການຕິດຕໍ່ກັບ ຂໍຂອບໃຈ');
+        ->with('succes', 'ການສະໝັກເພິມຈຳນວນຫ້ອງເເຖວສຳເລັດ ກະລະນາລໍຖ້າ ພວກເຮົາກຳລັງດຳເນີນງານ ຂໍຂອບໃຈ');
     }
 }
