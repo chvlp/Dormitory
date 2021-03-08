@@ -17,10 +17,13 @@
                                         : {{$item->village}}, {{$item->distric}}, {{$item->province}}
                                 </p>
 
-                                <div style="margin-top: -50px;" class="locat">
+                                <div style="margin-top: -50px;
+                                            text-align:right;" class="locat">
                                     ເສັ້ນທາງໄປຫາ{{$item->name}}:
                                     <a href="https://www.google.com/maps/place/Faculty+of+Engineering+(NUOL)/@17.9382428,102.6239951,15.89z/data=!4m5!3m4!1s0x3124661fa3be608d:0x1033c20d059359d0!8m2!3d17.9396795!4d102.6240259" target="_blank">
-                                        <i class="fas fa-map-marked-alt"></i>
+                                        <i
+                                        style=" font-size:30px;
+                                        color:rgb(145, 0, 0);" class="fas fa-map-marked-alt"></i>
                                     </a>
                                 </div>
                             </div>
@@ -52,7 +55,10 @@
                                             <i style="color: rgb(53, 4, 4);" class="fas fa-building"></i>
                                             : {{$item->village}}, {{$item->distric}}, {{$item->province}} </p>
                                         <div class="moree">
-                                            <button class="button button2"><a href="{{route('visavakum.show',$item->id)}}">ລາຍລະອຽດ</a></button>
+                                            <button  style=" width: 100px;
+                                            border-radius: 4%;
+                                            border: 1px solid #5499C7;"
+                                            class="button button2"><a href="{{route('visavakum.show',$item->id)}}">ລາຍລະອຽດ</a></button>
                                         </div>
                                     </div>
                             </div>

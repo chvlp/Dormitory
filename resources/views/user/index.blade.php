@@ -62,7 +62,10 @@
                                         <p style="font-size: 30px" class="card-text">{{$item->name}}</p>
                                         <p style="font-size: 13px" class="card-text">{{$item->village}}, {{$item->distric}}, {{$item->province}}</p>
                                             <div class="moree">
-                                                <button class="button button2"><a href="{{route('dongdok.index')}}">ລາຍລະອຽດ</a></button>
+                                                <button style=" width: 100px;
+                                                border-radius: 4%;
+                                                border: 1px solid #5499C7;"
+                                                class="button button2"><a href="{{route('dongdok.index')}}">ລາຍລະອຽດ</a></button>
                                             </div>
 
                                     </div>
@@ -78,7 +81,10 @@
                                         <p style="font-size: 30px" class="card-text">{{$item->name}}</p>
                                         <p style="font-size: 13px" class="card-text">{{$item->village}}, {{$item->distric}}, {{$item->province}}</p>
                                         <div class="moree">
-                                            <button class="button button2"><a href="{{route('visavakum.index')}}">ລາຍລະອຽດ</a></button>
+                                            <button style=" width: 100px;
+                                            border-radius: 4%;
+                                            border: 1px solid #5499C7;"
+                                             class="button button2"><a href="{{route('visavakum.index')}}">ລາຍລະອຽດ</a></button>
                                         </div>
                                     </div>
 
@@ -93,7 +99,10 @@
                                         <p style="font-size: 30px" class="card-text">{{$item->name}}</p>
                                         <p style="font-size: 13px" class="card-text">{{$item->village}}, {{$item->distric}}, {{$item->province}}</p>
                                         <div class="moree">
-                                            <button class="button button2"><a href="{{route('soutsaka.index')}}">ລາຍລະອຽດ</a></button>
+                                            <button style=" width: 100px;
+                                            border-radius: 4%;
+                                            border: 1px solid #5499C7;"
+                                             class="button button2"><a href="{{route('soutsaka.index')}}">ລາຍລະອຽດ</a></button>
                                         </div>
                                     </div>
 

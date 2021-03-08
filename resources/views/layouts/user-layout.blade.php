@@ -533,7 +533,7 @@ a{
         border-radius: 5%;
         border: 2px solid #5499C7;
     }
-    .button:hover{
+    .button button2:hover{
 
         border: 2px solid #197e43;
     }
@@ -709,7 +709,7 @@ hr{
     border-radius: 500%;
     width: 100%;
     height: 100%;
-   
+
 }
 
 .img{
@@ -819,7 +819,7 @@ hr{
                         </form>
 
                             <li style="margin-top: 2px;" class="nav-link" style="--i: 1.1s">
-                                <a style="cursor:context-menu;color:white;" ><i style="margin-top:-6px;margin-right:6px;" class="far fa-user"></i> {{ Auth::user()->name }} 
+                                <a style="cursor:context-menu;color:white;" ><i style="margin-top:-6px;margin-right:6px;" class="far fa-user"></i> {{ Auth::user()->name }}
                                     <i class="fas fa-caret-down"></i>
                                     @foreach ( Auth::user()->roles as $item)
                                         @if  ($item->id==2)
@@ -862,9 +862,9 @@ hr{
     @yield('contain')
 
     <hr style="border: 1px solid  #0099ff;">
-        
 
-    
+
+
     <!-- Footer Section -->
     <div class="footer__container">
         <section class="social__media">
@@ -905,7 +905,7 @@ hr{
         </section>
       </div>
 
-      
+
 
     <script src="https://kit.fontawesome.com/73f13da6d0.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"

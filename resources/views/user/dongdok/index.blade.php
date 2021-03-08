@@ -17,10 +17,14 @@
                                         : {{$item->village}}, {{$item->distric}}, {{$item->province}}
                                 </p>
 
-                                <div style="margin-top: -50px;" class="locat">
+                                <div style="margin-top: -50px;
+                                            text-align: right"
+                                class="locat">
                                     ເສັ້ນທາງໄປຫາ{{$item->name}}:
                                     <a href="https://www.google.com/maps/place/National+University+of+Laos+NUOL/@18.0363389,102.6336733,16.43z/data=!4m5!3m4!1s0x31245d38b6cb9d2b:0xd933c8032521d049!8m2!3d18.0369375!4d102.6350625" target="_blank">
-                                        <i class="fas fa-map-marked-alt"></i>
+                                        <i style=" font-size:30px;
+                                        color:rgb(145, 0, 0);"
+                                         class="fas fa-map-marked-alt"></i>
                                     </a>
                                 </div>
                             </div>
@@ -52,7 +56,10 @@
                                             <i style="color: rgb(53, 4, 4);" class="fas fa-building"></i>
                                             : {{$item->village}}, {{$item->distric}}, {{$item->province}} </p>
                                         <div class="moree">
-                                            <button class="button button2"><a href="{{route('dongdok.show',$item->id)}}">ລາຍລະອຽດ</a></button>
+                                            <button  style=" width: 100px;
+                                            border-radius: 4%;
+                                            border: 1px solid #5499C7;"
+                                             class="button button2"><a href="{{route('dongdok.show',$item->id)}}">ລາຍລະອຽດ</a></button>
                                         </div>
                                     </div>
                             </div>
