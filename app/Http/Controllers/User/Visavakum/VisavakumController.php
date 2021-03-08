@@ -24,7 +24,7 @@ class VisavakumController extends Controller
     public function index()
     {
         $schools = School::with('dormitory')->get();
-        $dormitorys = Dormitory::all();
+        $dormitorys = Dormitory::orderBy('phase', 'ASC')->get();
         // return $dormitorys;
         return view('user.visavakum.index',compact('schools','dormitorys'));
     }

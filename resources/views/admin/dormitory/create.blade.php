@@ -36,9 +36,9 @@
                     <div class="form-group">
                         <strong>ເລືອກໂຮງຮຽນ</strong>
                         <select  name="school_id" class="form-control" placeholder="ຊື່ຫ້ອວເເຖວ">
-                            <option value=""> ກະລຸນາເລືອກໂຮງຮຽນ </option>
+                            <option style="color: red;" value=""> ກະລຸນາເລືອກໂຮງຮຽນ </option>
                             @foreach ($schools as $item)
-                                <option value="{{$item->id}}"> {{$item->name}} </option>
+                                <option  style="color: aqua;" value="{{$item->id}}"> {{$item->name}}</option>
                             @endforeach
                         </select>
                     </div>
@@ -54,10 +54,10 @@
                     <div class="form-group">
                         <strong>ເລືອກເຈົ້າຂອງຫ້ອງເເຖວ</strong>
                         <select  name="user_id" class="form-control" placeholder="ຊື່ຫ້ອວເເຖວ">
-                            <option value=""> ກະລຸນາເລືອກເຈົ້າຂອງຫ້ອງເເຖວ </option>
+                            <option style="color: red;" value=""> ກະລຸນາເລືອກເຈົ້າຂອງຫ້ອງເເຖວ </option>
                             @foreach ($registors as $item)
                                 {{-- @if($item->user_id) --}}
-                                <option value="{{$item->user->id}}"> {{$item->user->name}} </option>
+                                <option style="color: aqua;" value="{{$item->user->id}}"> {{$item->user->name}} </option>
                                 {{-- @endif --}}
                             @endforeach
                         </select>

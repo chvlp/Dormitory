@@ -111,6 +111,8 @@ Route::post('/soutsaka/{dormitory}/comments',              'User\Soutsaka\Commen
 Route::get('/user/registor',                        'User\Regist\RegistController@index')->name('user.regist.index');
 Route::post('/user/registor/store',                 'User\Regist\RegistController@store')->name('user.regist.store');
 
+Route::get('/user/nonti', 'User\Nonti\NontiController@index')->name('user.nonti');
+
 Route::get('/dormit/registor',                        'Dormit\Regist\RegistController@index')->name('Dormit.regist.index');
 Route::post('/dormit/registor/store',                 'Dormit\Regist\RegistController@store')->name('Dormit.regist.store');
 

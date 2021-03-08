@@ -66,6 +66,7 @@
                         @endforeach
                         @if ($dormitory->id)
                                     <p  class="card-text"><a style="color:#5499C7 ;">ຊື່ຫ້ອງເເຖວ: </a> {{$dormitory->name}}</p>
+                                    <p  class="card-text"><a style="color:#5499C7 ;">ໄລຍະຫາງ: </a> {{$dormitory->phase}}</p>
                                     <p  class="card-text"><a style="color:#5499C7">ທີ່ຢູ່: </a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; {{$dormitory->horm}},  {{$dormitory->village}},  {{$dormitory->distric}},  {{$dormitory->province}}</p>
                                     <p  class="card-text"><a style="color: #5499C7">ລາຄ່າ : </a> &nbsp;&nbsp; &nbsp;&nbsp;  {{$dormitory->price}}</p>
                                     <p  class="card-text"><a style="color:#5499C7"><i class="fas fa-phone"></i> : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; </a> {{$dormitory->phone}}</p>

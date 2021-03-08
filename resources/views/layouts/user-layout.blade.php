@@ -652,39 +652,43 @@ a{
 hr{
     color: #0099ff;
 }
-
-.tumn{
-
+.outtumn{
+    background: rgb(157, 157, 157);
+    border: none;
+    outline: none;
     border-radius: 4px;
-    height: auto;
-    width: 50%;
-    padding: 2rem;
-    margin: auto;
-    text-align: center;
-}
-.tumn .outtumn span{
-    font-style: normal;
-    font-size: 20px;
-    font-weight: bold;
-    padding-bottom: 0.5rem;
-    color: black;
-}
-.tumn .intumn{
-    width: 250px;
-    text-align: left;
+    width: 70%;
     margin: auto;
 }
-.tumn .intumn span{
-    padding: 2rem;
-    font-size: 17px;
-    font-style: oblique;
-    font-weight: bold;
-    color: #0099ff;
-    margin-left: 4rem;
+.kkk{
+    padding: 0.5rem 1rem;
 }
-.tumn i{
+.kkk{
+    font-size: 18px;
+    font-weight: bold;
+}
+.intum span{
     font-size: 15px;
-    font-style: normal;
+    font-weight: normal;
+    padding-left: 4rem;
+}
+.intum span i{
+    font-size: 15px;
+    font-weight: bold;
+    color: #1b6799;
+}
+.ii{
+    display: flex;
+}
+.nav-link{
+    margin-top: -8px;
+    color: rgb(145, 0, 0);
+}
+.iii{
+    display:flex;
+    font-size: 15px;
+    padding-left: 4rem;
+    font-weight: normal;
 }
     </style>
 </head>
@@ -777,14 +781,30 @@ hr{
                         </form>
 
                             <li style="margin-top: 2px;" class="nav-link" style="--i: 1.1s">
-                                <a style="cursor:context-menu;color:white;" ><i style="margin-top:-6px;margin-right:6px;" class="far fa-user"></i> {{ Auth::user()->name }} <i class="fas fa-caret-down"></i></a>
+                                <a style="cursor:context-menu;color:white;" ><i style="margin-top:-6px;margin-right:6px;" class="far fa-user"></i> {{ Auth::user()->name }} 
+                                    <i class="fas fa-caret-down"></i>
+                                    @foreach ( Auth::user()->roles as $item)
+                                    @if  ($item->id==2)
+                                    <i style="color: red">*</i>
+                                    @endif
+                                @endforeach
+
+                                    </a>
                                 <div style="width:220px;" class="dropdown">
                                     <ul style="margin-top: -10px;">
                                         <li  class="dropdown-link">
-                                            <a href="{{route('user.regist.index')}}">ສະໝັກເປັນເຈົ້າຂອງຫ້ອງເເຖວ</a>
+                                            @foreach ( Auth::user()->roles as $item)
+                                                @if  ($item->id==3)
+                                                <a href="{{route('user.regist.index')}}">ສະໝັກເປັນເຈົ້າຂອງຫ້ອງເເຖວ</a>
+                                                @endif
+                                                @if($item->id==2)
+                                                    <a href=" {{route ('user.nonti')}} ">  <span style="color: white;font-weight: normal;">ເເຈ້ງເຕືອນ</span> <i style="color: rgb(145, 0, 0);font-weight: normal;font-style:normal;">{{$item->count()-2}} </i></a>
+                                                @endif
+                                            @endforeach
+                                            <a href=" {{route ('user.about')}} ">ກ່ຽວກັບເຮົາ</a>
+
                                         </li>
                                         <li class="dropdown-link">
-                                            <a href=" {{route ('user.about')}} ">ກ່ຽວກັບເຮົາ</a>
                                         </li>
                                         <li  style="font-family: Phetsarath OT;"class="dropdown-link">
                                             <a href="{{ route('logout') }}"

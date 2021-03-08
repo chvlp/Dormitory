@@ -24,7 +24,7 @@ class DongdokController extends Controller
     public function index()
     {
         $schools = School::all();
-        $dormitorys = Dormitory::all();
+        $dormitorys = Dormitory::orderBy('phase', 'ASC')->get();
         // return $dormitorys;
         return view('user.dongdok.index',compact('schools','dormitorys'));
     }
