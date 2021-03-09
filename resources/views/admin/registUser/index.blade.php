@@ -59,7 +59,7 @@
                         </td>
                         @endforeach
                     </tr>
-                </table>
+                </table>??
                 <center>
                     {{$comments->links()}}
                 </center>
