@@ -70,12 +70,6 @@
                 <div class="container">
                     <div  class="card-deck">
                         <div  class="row">
-                            {{-- @foreach ( $users->roleUsers as $item)
-                                 @if  ($item->role_id==3) --}}
-                                 @foreach ($users->roleUsers as $item)
-                                    {{$item}}
-                                 @endforeach
-
                                      @foreach ($registUsers as $key => $item)
                                     <div style="width: 185px;height:auto;" class="col-md-4">
                                        <div style="padding:15px 15px 15px 15px;border-radius:5px;border: 1px solid  #5499C7 ; width: 150px;height:auto;background:#cfecff" class="card mb-4 box-shadow">
@@ -87,28 +81,18 @@
                                                     <p class="card-text">ເມືອງ: <a href="{{route('admin.user.edit',$item->id+1) }}">{{$item->distric}}</a></p>
                                                     <p class="card-text">ເເຂວງ: <a href="{{route('admin.user.edit',$item->id+1) }}"> {{$item->province}}</a></p>
                                                     <p class="card-text">ລາຍລະອຽດ: <a href="{{route('admin.user.edit',$item->id+1) }}">{{$item->details}} </a></p></p>
-                                                    {{-- @if($item->user_id > Auth()->user()->id) --}}
                                                     <div  class="ggg">
                                                         <div class="ff">
                                                             <a href="{{route('admin.user.edit',$item->id+1) }}"><i class="fas fa-edit"></i></a>
-
                                                         </div>
                                                         <div class="hh">
                                                             <a  style="color:red;" href="{{URL::to('admin/delete/registor/user/'.$item->id)}}"><i class="fas fa-trash-alt"></i></a>
-
                                                         </div>
                                                     </div>
-
-                                                    {{-- @endif --}}
-
                                                 </div>
                                         </div>
                                     </div>
-                                    @endforeach
-                                    {{-- @endif
-
-
-                            @endforeach --}}
+                            @endforeach
                         </div>
                     </div>
                 </div>
