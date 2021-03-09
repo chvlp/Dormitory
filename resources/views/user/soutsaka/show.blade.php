@@ -94,15 +94,18 @@
                     <form  action="/soutsaka/{{$dormitory->id}}/comments" method="POST">
                         {{ csrf_field() }}
                         <div style="width: 90%;margin:auto;" class="booo">
-                            <textarea name="body" id="" style="width: 100%; padding-top:10px;padding-left:20px;" rows="3" placeholder="ປ້ອນຄອມເມັ້ນ ຢູ່ນີ້ ..."></textarea>
+                            <textarea name="body" id="" style="width: 100%; padding-top:10px;padding-left:20px; font-family: 'Phetsarath OT';" rows="3" placeholder="ປ້ອນຄອມເມັ້ນ ຢູ່ນີ້ ..."></textarea>
                             <input style="
+                             font-family: 'Phetsarath OT';
                                 background-color: #4CAF50;
                                 color: white;
                                 padding: 12px 20px;
                                 border: none;
                                 border-radius: 4px;
                                 cursor: pointer;
+
                               " type="submit" value="ເພີມຄອມເມັ້ນ">
+                        </div>
                     </form>
                 </div>
                 <br><br>

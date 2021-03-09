@@ -90,12 +90,12 @@
      <div  style="border: 1px solid  #5499C7 ;" class="intt">
         <h2 class="card-text">ຄອມເມັ້ນ</h2>
             <hr>
-               <div style="margin-top:20px;" class="texttt">
+               <div style="margin-top:20px; font-family: 'Phetsarath OT';" class="texttt">
                     <form  method="POST" action="/dongdok/{{$dormitory->id}}/comments">
                         {{ csrf_field() }}
-                        <div style="width: 90%;margin:auto;" class="booo">
-                            <textarea name="body" style="width: 100%; padding-top:10px;padding-left:20px;" rows="3" placeholder="ປ້ອນຄອມເມັ້ນ ຢູ່ນີ້ ..."></textarea>
-                            <input style="
+                        <div style="width: 90%;margin:auto; font-family: 'Phetsarath OT';" class="booo">
+                            <textarea name="body" style="width: 100%; padding-top:10px;padding-left:20px; font-family: 'Phetsarath OT';" rows="3" placeholder="ປ້ອນຄອມເມັ້ນ ຢູ່ນີ້ ..."></textarea>
+                            <input style=" font-family: 'Phetsarath OT';
                                 background-color: #4CAF50;
                                 color: white;
                                 padding: 12px 20px;
@@ -103,6 +103,7 @@
                                 border-radius: 4px;
                                 cursor: pointer;
                               " type="submit" value="ເພີມຄອມເມັ້ນ">
+                        </div>
                     </form>
                 </div>
                 <br><br>

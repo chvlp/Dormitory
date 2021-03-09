@@ -664,6 +664,7 @@ hr{
     padding: 0.5rem 1rem;
 }
 .kkk{
+    padding: 0.5rem 1rem;
     font-size: 18px;
     font-weight: bold;
 }
@@ -873,15 +874,16 @@ hr{
                         font-weight: bold;
                         color:#3183ac;
                         font-size:21px;
-                        padding:1rem;
+                        padding-bottom:1rem;
                         " class="footer__logo">
-              <a href="/" id="footer__logo">AlignDev</a>
+              <a href="{{ route('user.index')}}" id="footer__logo">AlignDev</a>
             </div>
             <p  style="text-align: center;
-                        font-size: 15px;" class="website__rights">© AlignDev 2020. All rights reserved</p>
+                        font-size: 15px;margin-bottom:-1px;" class="website__rights">© AlignDev 2020. All rights reserved</p>
             <div style="text-align: center;
                         font-size: 19px;
                         color:#3183ac;
+                        padding:-1rem;
                         " class="social__icons">
               <a style="padding: 1rem;" href="/" class="social__icon--link" target="_blank"
                 ><i class="fab fa-facebook"></i
