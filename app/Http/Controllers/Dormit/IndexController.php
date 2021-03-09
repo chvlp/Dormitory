@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers\Dormit;
 
+use App\Dormitory;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class IndexController extends Controller
 {
@@ -11,9 +13,11 @@ class IndexController extends Controller
     {
         $this->middleware('auth');
     }
-    
+
     public function index()
     {
-        return view('dormit.index');
+        $dormitorys = Dormitory::all();
+        $countdotmit = count($dormitorys);
+        return view('dormit.index',compact('dormitorys','countdotmit'));
     }
 }

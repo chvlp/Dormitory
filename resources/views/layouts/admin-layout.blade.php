@@ -57,6 +57,10 @@
         .hh{
             text-align: right;
         }
+        .card .card-body a:hover{
+            color:red;
+            text-decoration: none;
+        }
         </style>
 
 </head>

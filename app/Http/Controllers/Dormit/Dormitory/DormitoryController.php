@@ -49,7 +49,8 @@ class DormitoryController extends Controller
     public function create()
     {
          $schools = School::all();
-         return view('dormit.dormitory.create',compact('schools'));
+        $dormitorys = Dormitory::all();
+         return view('dormit.dormitory.create',compact('schools','dormitorys'));
     }
 
     /**

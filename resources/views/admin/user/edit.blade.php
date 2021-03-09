@@ -41,9 +41,11 @@
                 <div class="form-group row">
                     <div class="col-md-6">
                     <div class="from-check">
-                        <input type="checkbox" name="roles[]" value="{{$item->id}}"
+                        @if ($item->id>1)
+                        <input type="radio" name="roles[]" value="{{$item->id}}"
                         @if($user->roles->pluck('id')->contains($item->id)) checked @endif>
                         <label>{{$item->name}}</label>
+                        @endif
                     </div>
                     </div>
                 </div>

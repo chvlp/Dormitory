@@ -17,13 +17,15 @@ class ImageController extends Controller
     public function index(Request $request)
     {
         if (empty($request->all())) {
+            $dormitorys = Dormitory::all();
             $images = Image::orderBy('id', 'desc')->paginate(5);
-            return view('dormit.image.index',compact('images'));
+            return view('dormit.image.index',compact('images','dormitorys'));
         }
             else{
+        $dormitorys = Dormitory::all();
                 $images= Image::where('dormitory_id','like','%'.$request->search.'%')
                 ->paginate(5);
-                return view('dormit.image.index',compact('images'));
+                return view('dormit.image.index',compact('images','dormitorys'));
 
             }
 
@@ -83,7 +85,7 @@ class ImageController extends Controller
         ],[
             'dormitory_id.required' => 'ກະລູນາເລືອກຫ້ອງເເຖວທີ່ຕ້ອງການເພິມຮູບພາບ',
         ]);
-        
+
         $images = array();
         $images['dormitory_id'] = $request->dormitory_id;
         $image = $request->file('images');

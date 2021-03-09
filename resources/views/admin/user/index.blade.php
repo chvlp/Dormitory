@@ -42,6 +42,7 @@
                     </tr>
                         @foreach ($users as $item)
                             <tr>
+                                @if ($item->id>1)
                                 <td>{{$item->name}}</td>
                                 <td>{{$item->phone}}</td>
                                 <td>{{$item->email}}</td>
@@ -51,6 +52,7 @@
                                     {{-- <a class="btn btn-danger" href="{{route('admin.user.destroy',$item->id) }} "
                                          onclick="return confirm('Are you sure?')"><i class="fas fa-trash-alt"></i></a> --}}
                                 </td>
+                                @endif
                             </tr>
                         @endforeach
                 </table>

@@ -70,6 +70,7 @@
 
                 <li class="dropdown user user-menu">
                   <!-- Menu Toggle Button -->
+
                   <li class="nav-item">
                   <li><a class="nav-link active" aria-current="page" href="{{route('Dormit.regist.index')}}">  ສະໝັກຈຳນວນຫ້ອງເເຖວເພິມ</a>
                   </li>
@@ -80,11 +81,11 @@
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                         @csrf
                     </form>
-                    </li>
                     <li><a class="nav-link active" aria-current="page" href="{{ route('logout') }}"
                                 onclick="event.preventDefault();
                                 document.getElementById('logout-form').submit();"><i class="fas fa-sign-out-alt"></i> ອອກຈາກລະບົບ</a>
                     </li>
+                </li>
                 </li>
               </ul>
             </div>

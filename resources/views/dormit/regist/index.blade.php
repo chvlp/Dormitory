@@ -6,7 +6,10 @@
     <br><br><br>
 
     <section class="content-header">
-        <center><h1> ສະໝັກຈຳນວນຫ້ອງເເຖວເພິມ</h1></center>
+        <center><h1 style="padding-bottom: 3rem;"> ສະໝັກຈຳນວນຫ້ອງເເຖວເພິມ</h1>
+            <p> <span style="color: red">ໝາຍເຫດ!:</span>  ເມື່ອທ່ານສະໝັກຫ້ອງເເຖວໄປຄັ້ງ 1 ທ່ານຈະໄດ້ການໂຄສະນາຫ້ອງເເຖວ 1 ຫ້ອງເເຖວ</p>
+            <p style="margin-left: -20px;"> <span style="color: red">ກົດ:</span>  ທ່ານສາມາດໂຄສະນາຫ້ອງເເຖວຂອງທ່ານໄດ້ພຽງເເຕ່ 5 ຫ້ອງເເຖວເທົ່ານັ້ນ</p>
+        </center>
     </section>
 
 
@@ -22,7 +25,7 @@
     <form action="{{route('Dormit.regist.store')}}" method="POST" enctype="multipart/form-data">
         @csrf
         <section style="width:70%" class="content container-fluid">
-            <div class="row">
+            {{-- <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
                         <strong>ຈຳນວນ</strong>
@@ -34,7 +37,7 @@
                     </div>
                     @enderror
                 </div>
-            </div>
+            </div> --}}
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">

@@ -70,18 +70,23 @@
                 <div class="container">
                     <div  class="card-deck">
                         <div  class="row">
-                            @foreach ($registUsers as $key => $item)
-                                {{-- @if ($item->id==1) --}}
+                            {{-- @foreach ( $users->roleUsers as $item)
+                                 @if  ($item->role_id==3) --}}
+                                 @foreach ($users->roleUsers as $item)
+                                    {{$item}}
+                                 @endforeach
+
+                                     @foreach ($registUsers as $key => $item)
                                     <div style="width: 185px;height:auto;" class="col-md-4">
-                                        <div style="padding:15px 15px 15px 15px;border-radius:5px;border: 1px solid  #5499C7 ; width: 150px;height:auto;background:#cfecff" class="card mb-4 box-shadow">
-                                            <img style="border-radius: 5px;" class="card-img-top" src="http://pushshift.io/wp-content/uploads/2019/06/user-management_3.jpg" height="65px" width="100%" alt="Card image cap">
+                                       <div style="padding:15px 15px 15px 15px;border-radius:5px;border: 1px solid  #5499C7 ; width: 150px;height:auto;background:#cfecff" class="card mb-4 box-shadow">
+                                            <a href="{{route('admin.user.edit',$item->id+1) }}"><img style="border-radius: 5px;" class="card-img-top" src="http://pushshift.io/wp-content/uploads/2019/06/user-management_3.jpg" height="65px" width="100%" alt="Card image cap"></a>
                                                 <div style="font-size: 13px"  class="card-body">
-                                                    <p class="card-text">ຊື່: <i style="font-style:normal;color:#5499C7"> {{$item->user->name}}</i></p>
-                                                    <p class="card-text">ເບິໂທ:<i style="font-style:normal;color:#5499C7"> {{$item->user->phone}} </i></p>
-                                                    <p class="card-text">ບ້ານ: {{$item->village}}</p>
-                                                    <p class="card-text">ເມືອງ: {{$item->distric}}</p>
-                                                    <p class="card-text">ເເຂວງ: {{$item->province}}</p>
-                                                    <p class="card-text">ລາຍລະອຽດ: {{$item->details}} </p>
+                                                    <p class="card-text">ຊື່: <a href="{{route('admin.user.edit',$item->id+1) }}"><i style="font-style:normal;color:#5499C7"> {{$item->user->name}}</i></a></p>
+                                                    <p class="card-text">ເບິໂທ:<a href="{{route('admin.user.edit',$item->id+1) }}"><i style="font-style:normal;color:#5499C7"> {{$item->user->phone}} </i></a></p>
+                                                    <p class="card-text">ບ້ານ: <a href="{{route('admin.user.edit',$item->id+1) }}"> {{$item->village}}</a></p>
+                                                    <p class="card-text">ເມືອງ: <a href="{{route('admin.user.edit',$item->id+1) }}">{{$item->distric}}</a></p>
+                                                    <p class="card-text">ເເຂວງ: <a href="{{route('admin.user.edit',$item->id+1) }}"> {{$item->province}}</a></p>
+                                                    <p class="card-text">ລາຍລະອຽດ: <a href="{{route('admin.user.edit',$item->id+1) }}">{{$item->details}} </a></p></p>
                                                     {{-- @if($item->user_id > Auth()->user()->id) --}}
                                                     <div  class="ggg">
                                                         <div class="ff">
@@ -99,9 +104,11 @@
                                                 </div>
                                         </div>
                                     </div>
-                                {{-- @endif --}}
+                                    @endforeach
+                                    {{-- @endif
 
-                            @endforeach
+
+                            @endforeach --}}
                         </div>
                     </div>
                 </div>

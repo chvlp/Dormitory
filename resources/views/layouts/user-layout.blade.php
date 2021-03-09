@@ -788,6 +788,7 @@ hr{
                                                 </ul>
                                             </div>
                                         </li>
+                                        <li class="dropdown-link"></li>
                                         <li class="dropdown-link">
                                             @foreach ($schools as $key => $item)
                                                 @if ($item->id==3)
@@ -835,8 +836,7 @@ hr{
                                             @foreach ( Auth::user()->roles as $item)
                                                 @if  ($item->id==3)
                                                 <a href="{{route('user.regist.index')}}">ສະໝັກເປັນເຈົ້າຂອງຫ້ອງເເຖວ</a>
-                                                @endif
-                                                @if($item->id==2)
+                                                @else
                                                     <a href=" {{route ('user.nonti')}} ">  <span style="color: white;font-weight: normal;">ເເຈ້ງເຕືອນ</span> <i style="color: rgb(145, 0, 0);font-weight: normal;font-style:normal;">{{$item->count()-2}} </i></a>
                                                 @endif
                                             @endforeach
