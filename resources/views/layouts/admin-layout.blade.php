@@ -61,6 +61,39 @@
             color:red;
             text-decoration: none;
         }
+        .re__contain{
+            margin: auto;
+            width: 1200px;
+            height: auto;
+        }
+        .re__nav{
+            display: flex;
+        }
+        .re__nav ul{
+            display: flex;
+            padding: 1rem 5rem;
+        }
+
+        .re__list{
+            padding: 0 2rem;
+            text-decoration: none;
+            font-style: normal;
+            list-style-type: none;
+            font-size: 17px;
+        }
+        .re__list a:hover{
+            text-decoration: none;
+            color: blue;
+        }
+        .re__list i{
+            color: darkcyan;
+            font-size:13px;
+        }
+
+        .active{
+            color: blue;
+        }
+
         </style>
 
 </head>
@@ -121,7 +154,7 @@
         <li><a href="{{route('image.index')}}"><span><i class="fas fa-images"></i> ຈັດການຮູບພາບຂອງຫ້ອງເເຖວ</span></a></li>
         <li><a href="{{route('comment.index')}}"><span><i class="fas fa-comments"></i> ຈັດການຂໍ້ມູນຄອມເມັ້ນ</span></a></li>
         <hr>
-        <li><a href="#"><span><i class="fas fa-comments"></i> ລາຍງານຂໍ້ມູນຫ້ອງເເຖວ</span></a></li>
+        <li><a href="{{ route('admin.report.index')}}"><span><i class="fas fa-clipboard-list"></i> ລາຍງານຂໍ້ມູນຫ້ອງເເຖວ</span></a></li>
       </ul>
       <!-- /.sidebar-menu -->
     </section>

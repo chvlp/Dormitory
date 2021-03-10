@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\registor;
 use App\RegistorUser;
 use App\Role;
+use App\RoleUser;
 use App\User;
 use Illuminate\Http\Request;
 
@@ -20,12 +21,17 @@ class RegistController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(User $user)
     {
         $registors = registor::all();
+        $roles = Role::all();
         $users = User::all();
+        $roleUsers = RoleUser::all();
         $registUsers = RegistorUser::all();
-        return view('admin.registUser.index',compact('registors','users','registUsers'));
+        return view('admin.registUser.index',compact('registors','users','registUsers','roles','roleUsers'))->with([
+            'user' => $user,
+            'roles' => $roles
+        ]);
 
     }
 

@@ -47,6 +47,12 @@
         .row{
             display: flex;
         }
+        .khor {
+            text-decoration: none;
+        }
+        .khor:hover{
+            text-decoration: none;
+        }
         </style>
 
 </head>
@@ -72,7 +78,7 @@
                   <!-- Menu Toggle Button -->
 
                   <li class="nav-item">
-                  <li><a class="nav-link active" aria-current="page" href="{{route('Dormit.regist.index')}}">  ສະໝັກຈຳນວນຫ້ອງເເຖວເພິມ</a>
+                  <li><a class="nav-link active" aria-current="page" href="{{route('Dormit.regist.index')}}"> ຮ້ອງຂໍການລົງໂຄສະນາຫ້ອງເເຖວ</a>
                   </li>
                   </li>
                   <li class="nav-item">
