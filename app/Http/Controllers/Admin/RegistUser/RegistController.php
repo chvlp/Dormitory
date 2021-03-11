@@ -27,7 +27,7 @@ class RegistController extends Controller
         $roles = Role::all();
         $users = User::all();
         $roleUsers = RoleUser::all();
-        $registUsers = RegistorUser::all();
+        $registUsers = RegistorUser::orderBy('id', 'desc')->paginate(5);
         return view('admin.registUser.index',compact('registors','users','registUsers','roles','roleUsers'))->with([
             'user' => $user,
             'roles' => $roles

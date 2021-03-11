@@ -58,8 +58,11 @@
             text-align: right;
         }
         .card .card-body a:hover{
-            color:red;
             text-decoration: none;
+        }
+        .card-deck{
+            display: grid;
+            grid-template-columns: 1fr 1fr;}
         }
         .re__contain{
             margin: auto;
@@ -154,7 +157,7 @@
         <li><a href="{{route('image.index')}}"><span><i class="fas fa-images"></i> ຈັດການຮູບພາບຂອງຫ້ອງເເຖວ</span></a></li>
         <li><a href="{{route('comment.index')}}"><span><i class="fas fa-comments"></i> ຈັດການຂໍ້ມູນຄອມເມັ້ນ</span></a></li>
         <hr>
-        <li><a href="{{ route('admin.report.index')}}"><span><i class="fas fa-clipboard-list"></i> ລາຍງານຂໍ້ມູນຫ້ອງເເຖວ</span></a></li>
+        <li><a href="{{ route('admin.report.all')}}"><span><i class="fas fa-clipboard-list"></i> ລາຍງານຂໍ້ມູນຫ້ອງເເຖວ</span></a></li>
       </ul>
       <!-- /.sidebar-menu -->
     </section>

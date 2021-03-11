@@ -17,7 +17,7 @@ class RegistController extends Controller
     }
     public function index()
     {
-        $registors = registor::all();
+        $registors = registor::orderBy('id', 'desc')->paginate(5);
         $registUsers = RegistorUser::all();
         $users = User::all();
         return view('admin.regist.index',compact('registors','users','registUsers'));

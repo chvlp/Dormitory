@@ -3,12 +3,12 @@
 @section('contain')
 
 <div class="re__contain">
-    <div class="re__nav">
+    {{-- <div class="re__nav">
         <ul>
             <li class="re__list"><i class="fas fa-hotel"></i> <a href="{{ route('admin.report.all')}}">ຫ້ອງເເຖວທັງໝົດ</a> </li>
             <li class="re__list"><i class="fas fa-user"></i> <a class="active" href="{{ route('admin.report.some')}}">ຫ້ອງເເຖວສວນບຸກຄົນ</a> </li>
         </ul>
-    </div>
+    </div> --}}
 
     <div style="padding-top:6rem;" class="container mb-5">
         <div style="margin-top: -45px;" class="col-md-4">
@@ -24,9 +24,9 @@
     </div>
     <h1 style="text-align: left;padding-left: 2.5rem;font-size:20px;font-weight:bold;padding-top:2rem;">ຫ້ອງເເຖວທັງໝົດ: <span style="color: red;"></span> </h1>
         <div  class="card-deck">
-            <div  class="row">
-                @foreach ($dormitorys as $item)
-                    {{$item->user->name}}
+            <div>
+                @foreach ($registUsers->user as $item)
+                    <p>{{$item->dormitory}}, </p>
                 @endforeach
                 {{-- @foreach ($dormitorys as $item)
                     <div style="width:170px;" class="col-md-4">

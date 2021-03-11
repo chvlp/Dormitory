@@ -98,6 +98,9 @@
                         </div>
                     </div>
                 </div>
+                <center>
+                    {{$registors->links()}}
+                </center>
     </section>
 
 

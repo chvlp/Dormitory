@@ -2,13 +2,18 @@
 @section('title','ໜ້າຫຼັກເຈົ້າຂອງລະບົບ')
 @section('contain')
 
+<section class="content-header">
+    <center><h1> ລາຍງານຂໍ້ມູນຫ້ອງເເຖວທັງໝົດ</h1></center>
+</section>
+
+
 <div class="re__contain">
-    <div class="re__nav">
+    {{-- <div class="re__nav">
         <ul>
             <li class="re__list"><i class="fas fa-hotel"></i> <a class="active" href="{{ route('admin.report.all')}}">ຫ້ອງເເຖວທັງໝົດ</a> </li>
             <li class="re__list"><i class="fas fa-user"></i> <a href="{{ route('admin.report.some')}}">ຫ້ອງເເຖວສວນບຸກຄົນ</a> </li>
         </ul>
-    </div>
+    </div> --}}
     {{-- @foreach ($dormitorys as $item)
         {{$item}}
     @endforeach --}}
@@ -34,8 +39,8 @@
                         <div style="border: 1px solid  #5499C7 ;width:160px;border-radius: 3px;" class="card mb-4 box-shadow">
                             <img style="border-radius: 3px;" class="card-img-top" src="{{URL::to($item->image)}}" height="110px;" width="100%" alt="Card image cap">
                                 <div class="card-body">
-                                    <p style="font-size: 30px;text-align: center;" class="card-text">{{$item->name}}</p>
-                                    <p style="font-size: 13px;padding-left:1rem;" class="card-text">{{$item->village}} <br> {{$item->distric}} <br>{{$item->province}}</p>
+                                    <p style="font-size: 15px;text-align: center;" class="card-text">{{$item->name}}</p>
+                                    <p style="font-size: 13px;padding-left:1rem;" class="card-text">ບ້ານ: {{$item->village}} <br> ຊື່ເຈົ້າ: {{$item->user->name}}</p>
                                 </div>
                         </div>
                     </div>

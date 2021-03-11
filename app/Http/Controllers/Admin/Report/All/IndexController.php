@@ -29,6 +29,7 @@ class IndexController extends Controller
                 $dormitc = count($dormit);
                 $dormitorys= Dormitory::where('name','like','%'.$request->search.'%')
                 ->orWhere('village','like','%'.$request->search.'%')
+                ->orWhere('user_id','like','%'.$request->search.'%')
                 ->orWhere('distric','like','%'.$request->search.'%')
                 ->orWhere('province','like','%'.$request->search.'%')
                 ->orWhere('phone','like','%'.$request->search.'%')
