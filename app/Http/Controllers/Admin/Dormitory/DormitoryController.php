@@ -112,6 +112,7 @@ class DormitoryController extends Controller
         $dormitorys['locat'] = $request->locat;
         $dormitorys['price'] = $request->price;
         $dormitorys['detail'] = $request->detail;
+        $dormitorys['created_at'] = Now();
         $image = $request->file('image');
         if ($image) {
             $image_name = date('day_H_s_i');

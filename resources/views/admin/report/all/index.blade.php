@@ -40,7 +40,10 @@
                             <img style="border-radius: 3px;" class="card-img-top" src="{{URL::to($item->image)}}" height="110px;" width="100%" alt="Card image cap">
                                 <div class="card-body">
                                     <p style="font-size: 15px;text-align: center;" class="card-text">{{$item->name}}</p>
-                                    <p style="font-size: 13px;padding-left:1rem;" class="card-text">ບ້ານ: {{$item->village}} <br> ຊື່ເຈົ້າ: {{$item->user->name}}</p>
+                                    <p style="font-size: 13px;padding-left:1rem;" class="card-text">ທີ່ຢູ່ບ້ານ: {{$item->village}}</p>
+                                    <p style="font-size: 13px;padding-left:1rem;" class="card-text">ຮ່ອມ: {{$item->horm}}</p>
+                                    <p style="font-size: 13px;padding-left:1rem;" class="card-text"> ຊື່ເຈົ້າ: {{$item->user->name}}</p>
+                                    <p style="font-size: 13px;padding-left:1rem;" class="card-text"> ລົງໂຄສະນາວັນທີ: {{ $item->created_at->format('d/m/Y') }}</p>
                                 </div>
                         </div>
                     </div>
