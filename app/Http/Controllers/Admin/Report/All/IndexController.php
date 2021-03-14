@@ -7,6 +7,8 @@ use App\Http\Controllers\Controller;
 use App\registor;
 use App\RegistorUser;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Date;
+use Illuminate\Support\Facades\DB;
 
 class IndexController extends Controller
 {
@@ -41,4 +43,30 @@ class IndexController extends Controller
 
             }
     }
+
+    public function search(Request $request){
+
+        $request->validate([
+
+            'fromDate' => 'required',
+            'toDate' => 'required',
+            ],[
+            'fromDate.required' => 'ກະລຸນາເລືອກວັນທີເລິມຕົ້ນ',
+            'toDate.required' => 'ກະລຸນາເລືອກວັນທີສຸດທ້າຍ',
+            ]);
+
+                $fromDate = $request->input('fromDate');
+                $toDate = $request->input('toDate');
+                $registors = registor::all();
+                $registUsers = RegistorUser::all();
+                $dormit = Dormitory::all();
+                $dormitc = count($dormit);
+                $dormitorys = Dormitory::select()
+                ->where('created_at','>=',$fromDate)
+                ->where('created_at','<=',$toDate)
+                ->paginate(6);
+                return view('admin.report.all.index',compact('registors','registUsers','dormitorys','dormit','dormitc'));
+
+    }
+
 }

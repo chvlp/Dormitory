@@ -8,18 +8,7 @@
 
 
 <div class="re__contain">
-    {{-- <div class="re__nav">
-        <ul>
-            <li class="re__list"><i class="fas fa-hotel"></i> <a class="active" href="{{ route('admin.report.all')}}">ຫ້ອງເເຖວທັງໝົດ</a> </li>
-            <li class="re__list"><i class="fas fa-user"></i> <a href="{{ route('admin.report.some')}}">ຫ້ອງເເຖວສວນບຸກຄົນ</a> </li>
-        </ul>
-    </div> --}}
-    {{-- @foreach ($dormitorys as $item)
-        {{$item}}
-    @endforeach --}}
-
-
-    <div style="padding-top:6rem;" class="container mb-5">
+       <div style="padding-top:6rem;" class="container mb-5">
         <div style="margin-top: -45px;" class="col-md-4">
             <form action="/admin/report/all/search" method="get" class="sidebar-form">
                 <div class="input-group">
@@ -31,7 +20,45 @@
                 </div>
             </form>
     </div>
-    <h1 style="text-align: left;padding-left: 2.5rem;font-size:20px;font-weight:bold;padding-top:2rem;">ຫ້ອງເເຖວທັງໝົດ: <span style="color: red;"> {{$dormitc}}</span> </h1>
+
+    <form action="/admin/report/search" method="POST">
+        @csrf
+        <br>
+        <div style="padding-bottom:1rem;" class="container">
+            <div  class="row">
+                <div style="width:900%;" class="container-fluid">
+                    <div class="form-group-row">
+                        <div class="col-sm-3">
+                            <span>ວັນເລີມຕົ້ນ</span>
+                            <input type="date" class="form-control input-sm" id="from" name="fromDate">
+                            @error('fromDate')
+                                <div style="padding:5px;border-radius: 5px;" class="alert-danger">
+                                    <strong>ຜິດພາດ ! </strong> {{$message}}
+                                </div>
+                            @enderror
+                        </div>
+                        <div class="col-sm-3">
+                            <span>ວັນສິນສຸດ</span>
+                            <input type="date" class="form-control input-sm" id="to" name="toDate" >
+                            @error('toDate')
+                                <div style="padding:5px;border-radius: 5px;" class="alert-danger">
+                                    <strong>ຜິດພາດ ! </strong> {{$message}}
+                                </div>
+                            @enderror
+                        </div>
+                        <div class="col-sm-2">
+                            <button style="margin-top: 20px;margin-left:-30px;" type="submit" class="btn" name="search" title="ຄົ້ນຫາ"><i class="fas fa-search"></i></button>
+                            <a href="{{ route('admin.report.all')}}"><span style="margin-top: 20px;margin-left:-10px;" class="btn"  title="ຣີເຟສ"><i class="fas fa-sync-alt"></i></span></a>
+                        </div>
+                        <div class="col-sm-1s">
+                            <label style="margin-top: 27px;margin-left:150px;" for="">ຫ້ອງເເຖວທັງໝົດ: <span style="color: red;"> {{$dormitc}}</span></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    {{-- <h1 style="text-align: left;padding-left: 2.5rem;font-size:20px;font-weight:bold;padding-top:2rem;">ຫ້ອງເເຖວທັງໝົດ: <span style="color: red;"> {{$dormitc}}</span> </h1> --}}
         <div  class="card-deck">
             <div  class="row">
                 @foreach ($dormitorys as $item)

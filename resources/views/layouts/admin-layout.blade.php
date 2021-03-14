@@ -108,7 +108,7 @@
 
           <!-- Logo -->
           <a  style="text-decoration: none;cursor: context-menu;" class="logo">
-           <i style="text-decoration:none; font-style: normal;font-size: 24px;color:rgb(255, 255, 255);"><i class="fas fa-user"></i> {{ Auth::user()->name}}</i>
+           <i title="ຊື່ຜູ້ໃຊ້ລະບົບໃນຂະນະນີ້" style="text-decoration:none; font-style: normal;font-size: 24px;color:rgb(255, 255, 255);"><i class="fas fa-user"></i> {{ Auth::user()->name}}</i>
           </a>
           <!-- Header Navbar -->
 
@@ -121,12 +121,12 @@
                 <li class="dropdown user user-menu">
                   <!-- Menu Toggle Button -->
                   <li class="nav-item">
-                  <li><a class="nav-link active" aria-current="page" href="{{route('admin.registUser.index')}}"> <i style="color:red;font-style: normal;"> {{ $registUsers->count() }} </i> <i class="far fa-comment-dots"></i> ຂໍ້ມູນຮອງຂໍເປັນເຈົ້າຂອງຫ້ອງເເຖວຈາກຜູ້ໃຊ້</a>
+                  <li><a title="ໜ້າຮອງຂໍເປັນເຈົ້າຂອງຫ້ອງເເຖວຈາກຜູ້ໃຊ້" class="nav-link active" aria-current="page" href="{{route('admin.registUser.index')}}"> <i style="color:red;font-style: normal;"> {{ $registUsers->count() }} </i> <i class="far fa-comment-dots"></i> ຂໍ້ມູນຮອງຂໍເປັນເຈົ້າຂອງຫ້ອງເເຖວຈາກຜູ້ໃຊ້</a>
                   </li>
                   </li>
 
                   <li class="nav-item">
-                    <li><a class="nav-link active" aria-current="page" href="{{route('admin.regist.index')}}"> <i style="color:red;font-style: normal;"> {{ $registors->count() }} </i> <i class="far fa-comment-dots"></i> ຂໍ້ມູນຮອງຂໍການເພິມຈຳນວນຫ້ອງເເຖວ</a>
+                    <li><a title="ໜ້າຮອງຂໍລົງໂຄສະນາຈຳນວນຫ້ອງເເຖວ" class="nav-link active" aria-current="page" href="{{route('admin.regist.index')}}"> <i style="color:red;font-style: normal;"> {{ $registors->count() }} </i> <i class="far fa-comment-dots"></i> ຂໍ້ມູນຮອງຂໍລົງໂຄສະນາຈຳນວນຫ້ອງເເຖວ</a>
                     </li>
                     </li>
 
@@ -137,7 +137,7 @@
                         @csrf
                     </form>
                     </li>
-                    <li><a class="nav-link active" aria-current="page" href="{{ route('logout') }}"
+                    <li><a title="ອອກຈາກລະບົບ" class="nav-link active" aria-current="page" href="{{ route('logout') }}"
                                 onclick="event.preventDefault();
                                 document.getElementById('logout-form').submit();"><i class="fas fa-sign-out-alt"></i> ອອກຈາກລະບົບ</a>
                     </li>
@@ -150,14 +150,14 @@
     <section class="sidebar">
       <ul class="sidebar-menu" data-widget="tree"><br>
         <!-- Optionally, you can add icons to the links -->
-        <li><a href="{{route('admin.index')}}"><span><i class="fas fa-home"></i> ໜ້າຫຼັກ</span></a></li><hr>
-        <li><a href="{{route('admin.user.index')}}"><span><i class="fas fa-users-cog"></i> ຈັດການຂໍ້ມູນຜູ້ໃຊ້</span></a></li>
-        <li><a href="{{route('school.index')}}"><span><i class="fas fa-university"></i> ຈັດການຂໍ້ມູນໂຮງຮຽນ</span></a></li>
-        <li><a href="{{route('dormitory.index')}}"><span><i class="fas fa-hotel"></i> ຈັດການຂໍ້ມູນຫ້ອງເເຖວ</span></a></li>
-        <li><a href="{{route('image.index')}}"><span><i class="fas fa-images"></i> ຈັດການຮູບພາບຂອງຫ້ອງເເຖວ</span></a></li>
-        <li><a href="{{route('comment.index')}}"><span><i class="fas fa-comments"></i> ຈັດການຂໍ້ມູນຄອມເມັ້ນ</span></a></li>
+        <li><a href="{{route('admin.index')}}"><span title="ໜ້າຫຼັກ"><i class="fas fa-home"></i> ໜ້າຫຼັກ</span></a></li><hr>
+        <li><a href="{{route('admin.user.index')}}"><span title="ຈັດການຂໍ້ມູນຜູ້ໃຊ້"><i class="fas fa-users-cog"></i> ຈັດການຂໍ້ມູນຜູ້ໃຊ້</span></a></li>
+        <li><a href="{{route('school.index')}}"><span title="ຈັດການຂໍ້ມູນໂຮງຮຽນ"><i class="fas fa-university"></i> ຈັດການຂໍ້ມູນໂຮງຮຽນ</span></a></li>
+        <li><a href="{{route('dormitory.index')}}"><span title="ຈັດການຂໍ້ມູນຫ້ອງເເຖວ"><i class="fas fa-hotel"></i> ຈັດການຂໍ້ມູນຫ້ອງເເຖວ</span></a></li>
+        <li><a href="{{route('image.index')}}"><span title="ຈັດການຮູບພາບຂອງຫ້ອງເເຖວ"><i class="fas fa-images"></i> ຈັດການຮູບພາບຂອງຫ້ອງເເຖວ</span></a></li>
+        <li><a href="{{route('comment.index')}}"><span title="ຈັດການຂໍ້ມູນຄອມເມັ້ນ"><i class="fas fa-comments"></i> ຈັດການຂໍ້ມູນຄອມເມັ້ນ</span></a></li>
         <hr>
-        <li><a href="{{ route('admin.report.all')}}"><span><i class="fas fa-clipboard-list"></i> ລາຍງານຂໍ້ມູນຫ້ອງເເຖວ</span></a></li>
+        <li><a href="{{ route('admin.report.all')}}"><span title="ລາຍງານຂໍ້ມູນຫ້ອງເເຖວ"><i class="fas fa-clipboard-list"></i> ລາຍງານຂໍ້ມູນຫ້ອງເເຖວ</span></a></li>
       </ul>
       <!-- /.sidebar-menu -->
     </section>

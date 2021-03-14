@@ -71,7 +71,8 @@ Route::get('/admin/delete/registor/user/{id}',     'Admin\RegistUser\RegistContr
 
 Route::get('/admin/report',                     'Admin\Report\indexController@index')->name('admin.report.index');
 Route::get('/admin/report/all',                 'Admin\Report\All\indexController@index')->name('admin.report.all');
-Route::get('/admin/report/all/search',                   'Admin\Report\All\indexController@index');
+Route::get('/admin/report/all/search',          'Admin\Report\All\indexController@index');
+Route::post('/admin/report/search',              'Admin\Report\All\indexController@search')->name('report.search');
 
 
 Route::get('/admin/report/some',                 'Admin\Report\Some\indexController@index')->name('admin.report.some');
