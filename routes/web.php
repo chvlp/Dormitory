@@ -114,6 +114,22 @@ Route::post('/visavakum/{dormitory}/comments',            'User\Visavakum\Commen
 Route::resource('/user/soutsaka',                          'User\Soutsaka\SoutsakaController');
 Route::post('/soutsaka/{dormitory}/comments',              'User\Soutsaka\CommentController@store');
 
+Route::resource('/user/school1',                          'User\School1\IndexController');
+Route::post('/school1/{dormitory}/comments',              'User\School1\CommentController@store');
+
+Route::resource('/user/school2',                          'User\School2\IndexController');
+Route::post('/school2/{dormitory}/comments',              'User\School2\CommentController@store');
+
+Route::resource('/user/school3',                          'User\School3\IndexController');
+Route::post('/school3/{dormitory}/comments',              'User\School3\CommentController@store');
+
+Route::resource('/user/school4',                          'User\School4\IndexController');
+Route::post('/school4/{dormitory}/comments',              'User\School4\CommentController@store');
+
+Route::resource('/user/school5',                          'User\School5\IndexController');
+Route::post('/school5/{dormitory}/comments',              'User\School5\CommentController@store');
+
+
 
 Route::get('/user/registor',                        'User\Regist\RegistController@index')->name('user.regist.index');
 Route::post('/user/registor/store',                 'User\Regist\RegistController@store')->name('user.regist.store');

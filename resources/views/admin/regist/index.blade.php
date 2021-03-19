@@ -1,10 +1,10 @@
 
 @extends('layouts.admin-layout')
-@section('title','ຈັດການຂໍ້ມູນການສະໝັກເພິມຈຳນວນຫ້ອງເເຖວ')
+@section('title','ຂໍ້ມູນການຮອງຂໍເພີ່ມຈຳນວນຫ້ອງເເຖວຈາກເຈົ້າຂອງຫ້ອງເເຖວ')
 @section('contain')
 
     <section class="content-header">
-        <center><h1> ຂໍ້ມູນການຮອງຂໍເພີມຈຳນວນຫ້ອງເເຖວຈາກເຈົ້າຂອງຫ້ອງເເຖວ</h1></center>
+        <center><h1> ຂໍ້ມູນການຮອງຂໍເພີ່ມຈຳນວນຫ້ອງເເຖວຈາກເຈົ້າຂອງຫ້ອງເເຖວ</h1></center>
     </section><br><br>
 
 
@@ -77,7 +77,7 @@
                                             <img style="border-radius: 5px;" class="card-img-top" src="http://pushshift.io/wp-content/uploads/2019/06/user-management_3.jpg" height="65px" width="100%" alt="Card image cap">
                                                 <div style="font-size: 13px"  class="card-body">
                                                     <p class="card-text">ຊື່: {{$item->user->name}}</p>
-                                                    <p class="card-text">ອີເມວ: {{$item->user->email}}</p>
+                                                    {{-- <p class="card-text">ອີເມວ: {{$item->user->email}}</p> --}}
                                                     <p class="card-text">ເບິໂທ: {{$item->user->phone}}</p>
                                                     <p class="card-text">ຈຳນວນຫ້ອງເເຖວ: <i style="font-style: normal;color:red;font-size:15px;"> {{$item->qty}}  </i> </p>
                                                     <p class="card-text">ລາຍລະອຽດ: {{$item->details}} </p>

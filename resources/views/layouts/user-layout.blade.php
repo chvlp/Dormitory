@@ -736,7 +736,7 @@ hr{
     <header class="headerr">
         <div style="height:50px;" class="contai">
             <div style=" margin: auto;margin-top:10px;" class="logo-container">
-                <p style="font-size: 18px; color:white;"><a style="color: white" href="{{route('user.index')}}">AlignDev</a></p>
+                <p style="font-size: 18px; color:white;"><a style="color: white" href="{{route('user.index')}}">Group at soutsaka</a></p>
             </div>
 
 
@@ -802,6 +802,111 @@ hr{
                                                         @foreach ($dormitorys as $key => $item)
                                                             @if($item->school_id==3)
                                                                 <a href="{{route('soutsaka.show',$item->id)}}">{{$item->name}}</a>
+                                                            @endif
+                                                        @endforeach
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+
+                                        <li class="dropdown-link"></li>
+                                        <li class="dropdown-link">
+                                            @foreach ($schools as $key => $item)
+                                                @if ($item->id==4)
+                                                    <a href="{{route('school1.index')}}"><i style="color: #fff ;" class="fas fa-graduation-cap"></i> {{$item->name}}<i class="fas fa-caret-right"></i></a>
+                                                @endif
+                                            @endforeach
+
+                                            <div class="dropdown second">
+                                                <ul style="margin-left:-10px;">
+                                                    <li style="margin-left:-28px;" class="dropdown-link">
+                                                        @foreach ($dormitorys as $key => $item)
+                                                            @if($item->school_id==4)
+                                                                <a href="{{route('school1.show',$item->id)}}">{{$item->name}}</a>
+                                                            @endif
+                                                        @endforeach
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+
+                                        <li class="dropdown-link"></li>
+                                        <li class="dropdown-link">
+                                            @foreach ($schools as $key => $item)
+                                                @if ($item->id==5)
+                                                    <a href="{{route('school2.index')}}"><i style="color: #fff ;" class="fas fa-graduation-cap"></i> {{$item->name}}<i class="fas fa-caret-right"></i></a>
+                                                @endif
+                                            @endforeach
+
+                                            <div class="dropdown second">
+                                                <ul style="margin-left:-10px;">
+                                                    <li style="margin-left:-28px;" class="dropdown-link">
+                                                        @foreach ($dormitorys as $key => $item)
+                                                            @if($item->school_id==5)
+                                                                <a href="{{route('school2.show',$item->id)}}">{{$item->name}}</a>
+                                                            @endif
+                                                        @endforeach
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+
+                                        <li class="dropdown-link"></li>
+                                        <li class="dropdown-link">
+                                            @foreach ($schools as $key => $item)
+                                                @if ($item->id==6)
+                                                    <a href="{{route('school3.index')}}"><i style="color: #fff ;" class="fas fa-graduation-cap"></i> {{$item->name}}<i class="fas fa-caret-right"></i></a>
+                                                @endif
+                                            @endforeach
+
+                                            <div class="dropdown second">
+                                                <ul style="margin-left:-10px;">
+                                                    <li style="margin-left:-28px;" class="dropdown-link">
+                                                        @foreach ($dormitorys as $key => $item)
+                                                            @if($item->school_id==6)
+                                                                <a href="{{route('school3.show',$item->id)}}">{{$item->name}}</a>
+                                                            @endif
+                                                        @endforeach
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+
+                                        <li class="dropdown-link"></li>
+                                        <li class="dropdown-link">
+                                            @foreach ($schools as $key => $item)
+                                                @if ($item->id==7)
+                                                    <a href="{{route('school4.index')}}"><i style="color: #fff ;" class="fas fa-graduation-cap"></i> {{$item->name}}<i class="fas fa-caret-right"></i></a>
+                                                @endif
+                                            @endforeach
+
+                                            <div class="dropdown second">
+                                                <ul style="margin-left:-10px;">
+                                                    <li style="margin-left:-28px;" class="dropdown-link">
+                                                        @foreach ($dormitorys as $key => $item)
+                                                            @if($item->school_id==7)
+                                                                <a href="{{route('school4.show',$item->id)}}">{{$item->name}}</a>
+                                                            @endif
+                                                        @endforeach
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+
+                                    
+                                        <li class="dropdown-link">
+                                            @foreach ($schools as $key => $item)
+                                                @if ($item->id==8)
+                                                    <a href="{{route('school5.index')}}"><i style="color: #fff ;" class="fas fa-graduation-cap"></i> {{$item->name}}<i class="fas fa-caret-right"></i></a>
+                                                @endif
+                                            @endforeach
+
+                                            <div class="dropdown second">
+                                                <ul style="margin-left:-10px;">
+                                                    <li style="margin-left:-28px;" class="dropdown-link">
+                                                        @foreach ($dormitorys as $key => $item)
+                                                            @if($item->school_id==8)
+                                                                <a href="{{route('school5.show',$item->id)}}">{{$item->name}}</a>
                                                             @endif
                                                         @endforeach
                                                     </li>
@@ -876,7 +981,7 @@ hr{
                         font-size:21px;
                         padding-bottom:1rem;
                         " class="footer__logo">
-              <a href="{{ route('user.index')}}" id="footer__logo">AlignDev</a>
+              <a href="{{ route('user.index')}}" id="footer__logo">Group at Soutsaka</a>
             </div>
             <p  style="text-align: center;
                         font-size: 15px;margin-bottom:-1px;" class="website__rights">© AlignDev 2020. All rights reserved</p>

@@ -53,6 +53,58 @@
         .khor:hover{
             text-decoration: none;
         }
+
+.column {
+  float: left;
+  width: 25%;
+  padding: 10px;
+}
+
+/* Style the images inside the grid */
+.column img {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.column img:hover {
+  opacity: 1;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+    .out{
+        /* border:1px solid black; */
+
+        width: 82%;
+        margin: auto;
+        height: auto;
+
+
+    }
+
+    .intt h2{
+        font-size: 20px;
+        text-align: left;
+        font-weight: bold;
+
+    }
+
+
+    .intt{
+        padding:20px 20px 20px 20px;
+        border:1px solid rgb(211, 211, 211);
+        border-radius: 3px;
+    }
+    .textt p{
+        font-size: 18px;
+    }
+
         </style>
 
 </head>
@@ -122,7 +174,7 @@
 
         </div>
         <footer class="main-footer">
-          <strong>Powered By &copy; AlignDev </strong>
+          <strong>Powered By &copy; Group Presentation at Sousaka Collage </strong>
         </footer>
 <script src="../../js/adminlte.min.js"></script>
 <script src="../../js/bootstrap.min.js"></script>

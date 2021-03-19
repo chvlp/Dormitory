@@ -1,10 +1,10 @@
 
 @extends('layouts.admin-layout')
-@section('title','ຈັດການຂໍ້ມູນການສະໝັກເປັນເຈົ້າຂອງຫ້ອງເເຖວ')
+@section('title','ຂໍ້ມູນການຮ້ອງຂໍເປັນເຈົ້າຂອງຫ້ອງເເຖວຈາກຜູ້ໃຊ້')
 @section('contain')
 
     <section class="content-header">
-        <center><h1> ຂໍ້ມູນການຮອງຂໍເປັນເຈົ້າຂອງຫ້ອງເເຖວຈາກຜູ້ໃຊ້</h1></center>
+        <center><h1> ຂໍ້ມູນການຮ້ອງຂໍເປັນເຈົ້າຂອງຫ້ອງເເຖວຈາກຜູ້ໃຊ້</h1></center>
     </section><br><br>
 
 

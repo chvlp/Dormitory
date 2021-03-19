@@ -39,7 +39,8 @@ class IndexController extends Controller
                 ->orWhere('phase','like','%'.$request->search.'%')
                 ->orWhere('price','like','%'.$request->search.'%')
                 ->paginate(6);
-                return view('admin.report.all.index',compact('registors','registUsers','dormitorys','dormit','dormitc'));
+
+                return view('admin.report.all.index',compact('registors','registUsers','dormitorys','dormit','dormitc','csearch'));
 
             }
     }
@@ -60,11 +61,12 @@ class IndexController extends Controller
                 $registors = registor::all();
                 $registUsers = RegistorUser::all();
                 $dormit = Dormitory::all();
-                $dormitc = count($dormit);
+                // $dormitc = count($dormit);
                 $dormitorys = Dormitory::select()
                 ->where('created_at','>=',$fromDate)
                 ->where('created_at','<=',$toDate)
                 ->paginate(6);
+                $dormitc = count($dormitorys);
                 return view('admin.report.all.index',compact('registors','registUsers','dormitorys','dormit','dormitc'));
 
     }

@@ -6,6 +6,7 @@ use App\Dormitory;
 use App\Http\Controllers\Controller;
 use App\School;
 use App\User;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
 class DormitoryController extends Controller
@@ -64,7 +65,7 @@ class DormitoryController extends Controller
         // return $request;
         $dormitorys = array();
         $dormitorys['school_id'] = $request->school_id;
-        $dormitorys['user_id'] = $request->user_id;
+        $dormitorys['user_id'] = Auth::user()->id;
         $dormitorys['name'] = $request->name;
         $dormitorys['village'] = $request->village;
         $dormitorys['distric'] = $request->distric;
@@ -120,20 +121,20 @@ class DormitoryController extends Controller
 
             'name' => 'required | min:4',
             'school_id' => 'required',
-            'user_id' => 'required',
+            // 'user_id' => 'required',
             'village' => 'required | min:4',
             'distric' => 'required | min:4',
             'province' => 'required | min:4',
             'phone' => 'required | min:4',
-            'horm' => 'required | min:4',
-            'phase' => 'required | min:3',
+            'horm' => 'required | min:2',
+            'phase' => 'required | min:2',
             'locat' => 'required | min:4',
             'price' => 'required | min:4',
             'detail' => 'required | min:4',
             ],[
             'name.required' => 'ກະລູນາປ້ອນຊື່ຫ້ອງເເຖວ',
             'school_id.required' => 'ກະລູນາເລືອກຊື່ໂຮງຮຽນ',
-            'user_id.required' => 'ກະລູນາເລືອກຫ້ອງເເຖວ',
+            // 'user_id.required' => 'ກະລູນາເລືອກຫ້ອງເເຖວ',
             'village.required' => 'ກະລູນາປ້ອນບ້ານ',
             'distric.required' => 'ກະລູນາປ້ອນເມືອງ',
             'province.required' => 'ເກະລູນາປ້ອນເເຂວງ',
@@ -148,7 +149,7 @@ class DormitoryController extends Controller
 
         $dormitorys = array();
         $dormitorys['school_id'] = $request->school_id;
-        $dormitorys['user_id'] = $request->user_id;
+        $dormitorys['user_id'] = Auth::user()->id;
         $dormitorys['name'] = $request->name;
         $dormitorys['village'] = $request->village;
         $dormitorys['distric'] = $request->distric;

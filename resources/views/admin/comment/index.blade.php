@@ -4,7 +4,7 @@
 @section('contain')
 
     <section class="content-header">
-        <center><h1> ຈັດການຂໍ້ມູນຫ້ອງເເຖວ</h1></center>
+        <center><h1> ຈັດການຂໍ້ມູນຄອມເມັ້ນ</h1></center>
     </section>
 
 

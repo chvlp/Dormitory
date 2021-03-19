@@ -175,7 +175,7 @@
 
         </div>
         <footer class="main-footer">
-          <strong>Powered By &copy; AlignDev </strong>
+          <strong>Powered By &copy; Group Presentation at Sousaka Collage </strong>
         </footer>
 <script src="../../js/adminlte.min.js"></script>
 <script src="../../js/bootstrap.min.js"></script>

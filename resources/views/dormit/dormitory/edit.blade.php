@@ -50,20 +50,6 @@
             <div class="row">
                 <div class="col-xs-6 col-sm-6 col-md-6">
                     <div class="form-group">
-                        <strong>ເລືອກເຈົ້າຂອງຫ້ອງເເຖວ</strong>
-                        <select  name="user_id" class="form-control" placeholder="ຊື່ຫ້ອວເເຖວ">
-                                <option style="color:rgb(62, 185, 213)"  value="{{ Auth::user()->id}}">{{ Auth::user()->name}} </option>
-                        </select>
-                    </div>
-                    @error('user_id')
-                    <div style="padding:5px;border-radius: 5px;" class="alert-danger">
-                        <strong>ຜິດພາດ ! </strong> {{$message}}
-                  </div>
-                @enderror
-                </div>
-
-                <div class="col-xs-6 col-sm-6 col-md-6">
-                    <div class="form-group">
                         <strong>ບ້ານ</strong>
                         <input type="text" name="village" class="form-control" value="{{$dormitorys->village}}">
                     </div>
@@ -73,8 +59,7 @@
                   </div>
                 @enderror
                 </div>
-            </div>
-            <div class="row">
+            
                     <div class="col-xs-6 col-sm-6 col-md-6">
                         <div class="form-group">
                             <strong>ເມືອງ</strong>
@@ -86,6 +71,8 @@
                       </div>
                     @enderror
                     </div>
+                </div>
+                <div class="row">
 
                     <div class="col-xs-6 col-sm-6 col-md-6">
                         <div class="form-group">
@@ -98,8 +85,7 @@
                       </div>
                     @enderror
                     </div>
-            </div>
-            <div class="row">
+            
                     <div class="col-xs-6 col-sm-6 col-md-6">
                         <div class="form-group">
                             <strong>ເບີໂທຂອງເຈົ້າຂອງຫ້ອງເເຖວ</strong>
@@ -111,6 +97,8 @@
                       </div>
                     @enderror
                     </div>
+                </div>
+                <div class="row">
 
                     <div class="col-xs-6 col-sm-6 col-md-6">
                         <div class="form-group">
@@ -123,8 +111,7 @@
                       </div>
                     @enderror
                     </div>
-            </div>
-            <div class="row">
+            
                     <div class="col-xs-6 col-sm-6 col-md-6">
                         <div class="form-group">
                             <strong>ໄລຍາຫາງຈາກຫ້ອງເເຖວໄປຫາໂຮງຮຽນທີ່ຂື້ນກັບ</strong>
@@ -136,6 +123,8 @@
                       </div>
                     @enderror
                     </div>
+                </div>
+                <div class="row">
 
                     <div class="col-xs-6 col-sm-6 col-md-6">
                         <div class="form-group">
@@ -148,8 +137,7 @@
                       </div>
                     @enderror
                     </div>
-            </div>
-            <div class="row">
+           
                     <div class="col-xs-6 col-sm-6 col-md-6">
                         <div class="form-group">
                             <strong>ລາຄ່າຕໍ່ຫ້ອງ</strong>
@@ -161,6 +149,8 @@
                       </div>
                     @enderror
                     </div>
+                </div>
+                <div class="row">
 
                     <div class="col-xs-6 col-sm-6 col-md-6">
                         <div class="form-group">

@@ -109,6 +109,101 @@
                             </div>
                         </div>
                     @endif
+                    @if ($item->id==4)
+                        <div   class="col-md-4">
+                            <div style="border: 1px solid  #5499C7 ;" class="card mb-4 box-shadow">
+                                <a href="{{route('school1.index')}}"> <img class="card-img-top" src="{{URL::to($item->image)}}" height="300" width="10000" alt="Card image cap"></a>
+                                    <div class="card-body">
+                                        <p style="font-size: 30px" class="card-text">{{$item->name}}</p>
+                                        <p style="font-size: 13px" class="card-text">{{$item->village}}, {{$item->distric}}, {{$item->province}}</p>
+                                        <div class="moree">
+                                            <button style=" width: 100px;
+                                            border-radius: 4%;
+                                            border: 1px solid #5499C7;"
+                                             class="button button2"><a href="{{route('school1.index')}}">ລາຍລະອຽດ</a></button>
+                                        </div>
+                                    </div>
+
+                            </div>
+                        </div>
+                    @endif
+
+                    @if ($item->id==5)
+                    <div   class="col-md-4">
+                        <div style="border: 1px solid  #5499C7 ;" class="card mb-4 box-shadow">
+                            <a href="{{route('school2.index')}}"> <img class="card-img-top" src="{{URL::to($item->image)}}" height="300" width="10000" alt="Card image cap"></a>
+                                <div class="card-body">
+                                    <p style="font-size: 30px" class="card-text">{{$item->name}}</p>
+                                    <p style="font-size: 13px" class="card-text">{{$item->village}}, {{$item->distric}}, {{$item->province}}</p>
+                                    <div class="moree">
+                                        <button style=" width: 100px;
+                                        border-radius: 4%;
+                                        border: 1px solid #5499C7;"
+                                         class="button button2"><a href="{{route('school2.index')}}">ລາຍລະອຽດ</a></button>
+                                    </div>
+                                </div>
+
+                        </div>
+                    </div>
+                @endif
+
+                @if ($item->id==6)
+                <div   class="col-md-4">
+                    <div style="border: 1px solid  #5499C7 ;" class="card mb-4 box-shadow">
+                        <a href="{{route('school3.index')}}"> <img class="card-img-top" src="{{URL::to($item->image)}}" height="300" width="10000" alt="Card image cap"></a>
+                            <div class="card-body">
+                                <p style="font-size: 30px" class="card-text">{{$item->name}}</p>
+                                <p style="font-size: 13px" class="card-text">{{$item->village}}, {{$item->distric}}, {{$item->province}}</p>
+                                <div class="moree">
+                                    <button style=" width: 100px;
+                                    border-radius: 4%;
+                                    border: 1px solid #5499C7;"
+                                     class="button button2"><a href="{{route('school3.index')}}">ລາຍລະອຽດ</a></button>
+                                </div>
+                            </div>
+
+                    </div>
+                </div>
+            @endif
+
+            @if ($item->id==7)
+            <div   class="col-md-4">
+                <div style="border: 1px solid  #5499C7 ;" class="card mb-4 box-shadow">
+                    <a href="{{route('school4.index')}}"> <img class="card-img-top" src="{{URL::to($item->image)}}" height="300" width="10000" alt="Card image cap"></a>
+                        <div class="card-body">
+                            <p style="font-size: 30px" class="card-text">{{$item->name}}</p>
+                            <p style="font-size: 13px" class="card-text">{{$item->village}}, {{$item->distric}}, {{$item->province}}</p>
+                            <div class="moree">
+                                <button style=" width: 100px;
+                                border-radius: 4%;
+                                border: 1px solid #5499C7;"
+                                 class="button button2"><a href="{{route('school4.index')}}">ລາຍລະອຽດ</a></button>
+                            </div>
+                        </div>
+
+                </div>
+            </div>
+        @endif
+
+        @if ($item->id==8)
+        <div   class="col-md-4">
+            <div style="border: 1px solid  #5499C7 ;" class="card mb-4 box-shadow">
+                <a href="{{route('school5.index')}}"> <img class="card-img-top" src="{{URL::to($item->image)}}" height="300" width="10000" alt="Card image cap"></a>
+                    <div class="card-body">
+                        <p style="font-size: 30px" class="card-text">{{$item->name}}</p>
+                        <p style="font-size: 13px" class="card-text">{{$item->village}}, {{$item->distric}}, {{$item->province}}</p>
+                        <div class="moree">
+                            <button style=" width: 100px;
+                            border-radius: 4%;
+                            border: 1px solid #5499C7;"
+                             class="button button2"><a href="{{route('school5.index')}}">ລາຍລະອຽດ</a></button>
+                        </div>
+                    </div>
+
+            </div>
+        </div>
+    @endif
+
 
 
                 @endforeach

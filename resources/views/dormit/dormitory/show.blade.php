@@ -19,13 +19,33 @@
         </div><br>
 
 
-        <div style="margin:auto;width:95%;height:800px;" class="boddy">
-            <div style="padding:10px 5px 10px 5px;width:95%;height:750px;margin:auto;" class="pic">
+        <div style="margin:auto;width:95%;heiht:auto;" class="bodd">
+            <div style="padding:10px 5px 10px 5px;width:95%;margin:auto;" class="pic">
 
                 <div class="imagee">
                     <img class="card-img-top" src="{{URL::to($dormitorys->image)}}" height="350" width="100%s" alt="Card image cap">
                 </div>
+                <hr style="border: 1px solid  #5499C7;"><br>
+
+                    <h1 style="text-align:center;font-size:26px;ont-weight: bold;">ຮູບພາບເພີມເຕີມ</h1>
+
+                <br>
+                    <!-- The four columns -->
+                <div style="border:1px solid #5499C7;width:100%;margin:auto;" class="row">
+                    @if ($dormitorys->id)
+                        @foreach ($dormitorys->images as $item)
+                            <div class="column">
+                                <a target="_blank" href="{{URL::to($item->images)}}">
+                                <img src="{{URL::to($item->images)}}" alt="Lights" style="width:100%" onclick="myFunction(this);">
+                            </div>
+                        </a>
+                        @endforeach
+                    @endif
+                </div>
+                <br>
                 <div style="padding-top:20px;padding-right:40px;" class="alltext">
+                    <h1 style="text-align:center;font-size:26px;ont-weight: bold;">ລາຍລະອຽດຫ້ອງເເຖວ</h1>
+
                     <h4 style="cursor: context-menu;">
                     <p>ເຈົ້າຂອງຫ້ອງເເຖວ: <a style="text-decoration: none;color:#5499C7;" > {{$dormitorys->user->name}}</a></p>
                     <p>ອີເມວເຈົ້າຂອງຫ້ອງເເຖວ: <a style="text-decoration: none;color:#5499C7;" > {{$dormitorys->user->email}}</a></p>
@@ -43,9 +63,10 @@
                 </div>
             </div>
         </div>
+        <br><br><br><br>
 
 
-        <div  class="out">
+        <div style="width:95%;padding-top:10px;margin: auto;"  class="alltext">
             <div class="intt">
                <h2 style="margin-left: 20px;" class="card-text">ຄອມເມັ້ນ</h2>
                    <hr>
@@ -62,13 +83,11 @@
                                        border-radius: 4px;
                                        cursor: pointer;
                                      " type="submit" value="ເພີມຄອມເມັ້ນ">
+                               </div>
                            </form>
                        </div>
                        <br><br>
 
-                       <div style="margin-top:50px;width:88%;margin:auto;" class="texttt">
-                        {{-- <h4>{{$dormitory->name}}  </h4>                       --}}
-                       </div>
                        @foreach ($dormitorys->comment as $item)
                        <div  style="width:70%;height:20px;margin:auto;padding-left:5px;text-align:right;border-radius:3px;" class="texttt">
                            <p style="margin-right:10px;"> {{$item->created_at-> diffForHumans() }}</p>
@@ -79,8 +98,7 @@
                              <p style="margin-top: -20px;font-size:14px;"> {{$item->body}} </p>
                            </div>
                            @endforeach
-       </div>
-
+            </div>
        </div>
 
     </section>
