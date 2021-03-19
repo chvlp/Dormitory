@@ -16,11 +16,11 @@
 
     <style>
          body{
-            font-family: 'Phetsarath OT';
+            font-family: 'Noto Sans Lao';
         }
         #customers {
 
-            font-family: 'Phetsarath OT';
+            font-family: 'Noto Sans Lao';
           border-collapse: collapse;
           width: 100%;
 
@@ -108,7 +108,7 @@
 
           <!-- Logo -->
           <a  style="text-decoration: none;cursor: context-menu;" class="logo">
-           <i title="ຊື່ຜູ້ໃຊ້ລະບົບໃນຂະນະນີ້" style="text-decoration:none; font-style: normal;font-size: 24px;color:rgb(255, 255, 255);"><i class="fas fa-user"></i> {{ Auth::user()->name}}</i>
+           <i title="ຊື່ຜູ້ໃຊ້ລະບົບໃນຂະນະນີ້" style="text-decoration:none; font-style: normal;font-size: 24px;color:rgb(255, 255, 255);font-family:'Monotype Corsiva';font-weight:Bold;"><i class="fas fa-user"></i> {{ Auth::user()->name}}</i>
           </a>
           <!-- Header Navbar -->
 

@@ -20,7 +20,7 @@
 }
 
 body{
-    font-family: 'Phetsarath OT';
+    font-family: 'Noto Sans Lao';
 
 }
 
@@ -538,7 +538,7 @@ section{
 
         border: 2px solid #197e43;
     }
-    
+
     .out{
         /* border:1px solid black; */
 

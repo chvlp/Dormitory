@@ -27,7 +27,7 @@
 }
 
 body{
-    font-family: 'Phetsarath OT';
+    font-family: 'Noto Sans Lao';
 
 }
 
@@ -893,7 +893,7 @@ hr{
                                             </div>
                                         </li>
 
-                                    
+
                                         <li class="dropdown-link">
                                             @foreach ($schools as $key => $item)
                                                 @if ($item->id==8)
